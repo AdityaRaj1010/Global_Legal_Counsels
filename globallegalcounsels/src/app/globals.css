@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+--transition-fast: 200ms;
+--transition-medium: 350ms;
+}
+
+
+html, body, #__next {
+height: 100%;
+scroll-behavior: smooth;
+}
+
+.content{
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Make sure hero-background covers full viewport and is fixed on larger screens */
+.hero-bg {
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+/* For the fixed effect we use a fixed pseudo-background on larger screens. On mobile we fallback to normal background to avoid performance issues. */
+@media (min-width: 768px) {
+.hero-bg-fixed {
+background-attachment: fixed;
+}
+}
+
+
+/* Smooth utility for elements that transition on scroll */
+.transition-smooth {
+transition: background-color var(--transition-medium) ease, color var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
+}
+
+
+/* Mobile menu animation fallback spacing */
+.mobile-menu-open {
+transform-origin: top right;
+}
+
+
+/* Ensure images that should stretch use full-bleed layout */
+.full-bleed {
+width: 100vw;
+margin-left: calc(50% - 50vw);
+margin-right: calc(50% - 50vw);
+}
+
+
+/* Simple utilities for overlay darken */
+.overlay-dark::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.35);
+pointer-events: none;
+}
