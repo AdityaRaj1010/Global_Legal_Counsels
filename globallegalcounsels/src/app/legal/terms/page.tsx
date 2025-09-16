@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const TermsOfServicePage = () => {
@@ -314,8 +315,8 @@ const TermsOfServicePage = () => {
               <p><strong>Global Legal Counsels</strong></p>
               {/* <p>[Your Address]</p>
               <p>[City, State, ZIP Code]</p> */}
-              <p>Phone: +91-8051161374</p>
-              <p>Email: Raj@globallegalcounsels.com</p>
+              <p>Phone: <Link href={"tel:+916204770237"}>+91 6204770237</Link></p>
+              <p>Email: <Link href={"mailto:raj@globallegalcounsels.com"}>raj@globallegalcounsels.com</Link></p> 
             </div>
           </div>
         </section>

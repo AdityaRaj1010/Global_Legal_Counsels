@@ -290,9 +290,9 @@ const RealEstatePage: React.FC = () => {
             your transaction proceeds smoothly and your interests are fully protected.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white cursor-pointer text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+            {/* <button className="bg-white cursor-pointer text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
               Schedule Property Consultation
-            </button>
+            </button> */}
             <Link href="/contact">
               <button className="border-2 cursor-pointer border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-900 transition">
                 Contact Us

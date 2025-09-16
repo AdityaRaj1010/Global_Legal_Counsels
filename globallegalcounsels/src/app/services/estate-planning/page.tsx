@@ -302,9 +302,9 @@ const EstatePlanningPage: React.FC = () => {
             experienced estate planning attorneys.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white cursor-pointer text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            {/* <button className="bg-white cursor-pointer text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule Free Consultation
-            </button>
+            </button> */}
               <Link href="/contact">
             <button className="border-2 cursor-pointer border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Contact Us

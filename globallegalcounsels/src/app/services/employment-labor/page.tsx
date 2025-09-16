@@ -227,9 +227,9 @@ const EmploymentLaborPage: React.FC = () => {
             attorneys today for a confidential consultation about your case.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white cursor-pointer text-cyan-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
+            {/* <button className="bg-white cursor-pointer text-cyan-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition">
               Schedule Free Consultation
-            </button>
+            </button> */}
               <Link href="/contact">
             <button className="border-2 cursor-pointer border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-900 transition">
                 Contact Us

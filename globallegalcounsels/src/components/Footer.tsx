@@ -47,7 +47,7 @@ const Footer = () => {
             <li><Link href="/services/criminal-defense" className="hover:text-white transition">Criminal Defense</Link></li>
             <li><Link href="/services/intellectual-property" className="hover:text-white transition">Intellectual Property</Link></li>
             <li><Link href="/services/real-estate-law" className="hover:text-white transition">Real Estate Law</Link></li>
-            <li><Link href="/services/tax-law" className="hover:text-white transition">Tax Law</Link></li>
+            <li><Link href="/services/civil-litigation" className="hover:text-white transition">Civil Litigation</Link></li>
             <li><Link href="/services/personal-injury" className="hover:text-white transition">Personal Injury</Link></li>
             <li><Link href="/services/estate-planning" className="hover:text-white transition">Estate Planning</Link></li>
           </ul>

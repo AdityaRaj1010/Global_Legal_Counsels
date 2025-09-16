@@ -210,9 +210,9 @@ const CivilLitigationPage: React.FC = () => {
             Don&apos;t navigate civil litigation alone. Our experienced attorneys are ready to advocate for your interests and guide you through the legal process with confidence and skill.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white cursor-pointer text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+            {/* <button className="bg-white cursor-pointer text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
               Schedule Consultation
-            </button>
+            </button> */}
               <Link href="/contact">
             <button className="border-2 cursor-pointer border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition">
                 Contact Us

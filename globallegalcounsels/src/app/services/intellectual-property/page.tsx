@@ -411,9 +411,9 @@ const IntellectualPropertyPage: React.FC = () => {
             IP attorneys to develop a protection strategy tailored to your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white cursor-pointer text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            {/* <button className="bg-white cursor-pointer text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule IP Consultation
-            </button>
+            </button> */}
               <Link href="/contact">
             <button className="border-2 cursor-pointer border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-violet-600 transition-colors">
                 Contact Us

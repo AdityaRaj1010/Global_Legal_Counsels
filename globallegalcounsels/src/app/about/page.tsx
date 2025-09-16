@@ -364,9 +364,9 @@ const AboutPage = () => {
             Contact us today for a consultation and discover how our experienced legal team can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-stone-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            {/* <button className="bg-white text-stone-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule Consultation
-            </button>
+            </button> */}
             <Link href="/contact">
               <button className="border-2 border-white cursor-pointer text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-stone-600 transition-colors">
                 Contact Us
