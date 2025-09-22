@@ -5,11 +5,12 @@ const TermsOfServicePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-gray-900 text-white py-12">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-          <p className="text-lg text-gray-300">
+      <section className="bg-gray-900 text-white py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
+          <p className="text-xl md:text-2xl leading-relaxed max-w-4xl">
             {/* Effective Date: [Insert Date] | Last Updated: [Insert Date] */}
+            Please read these Terms of Service carefully
           </p>
         </div>
       </section>

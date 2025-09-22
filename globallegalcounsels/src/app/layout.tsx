@@ -14,6 +14,7 @@ return (
 <html lang="en">
 <body className="min-h-screen font-sans text-gray-900 bg-gray-50">
 <Header />
+<div className="lg:mt-12"/>
 {children}
 <Footer />
 </body>

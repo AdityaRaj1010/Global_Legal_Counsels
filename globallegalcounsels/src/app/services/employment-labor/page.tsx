@@ -7,7 +7,7 @@ const EmploymentLaborPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Sets the professional tone and introduces the service */}
       <section className="bg-gradient-to-br from-gray-900 to-cyan-900 text-white py-20">
-        <div className="container mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl font-bold mb-6">Employment & Labor Law</h1>
           <p className="text-xl max-w-3xl leading-relaxed">
             Protecting your rights in the workplace with comprehensive legal representation 

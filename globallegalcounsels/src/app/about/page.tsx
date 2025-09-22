@@ -178,6 +178,7 @@ const AboutPage = () => {
               <div className="flex-1">
                 <div className='flex justify-between'>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Raj Aryan</h3>
+                  <span className='text-gray-500 font-semibold text-lg'>5+ Years of Experience</span>
                   <span className='flex gap-3'>
                     <Link href={"https://www.linkedin.com/in/raj-aryan-901797343"}>
                       <Linkedin />
@@ -252,7 +253,7 @@ const AboutPage = () => {
         </section>
 
         {/* Experience Section */}
-        <section className="py-16 px-6 bg-white">
+        {/* <section className="py-16 px-6 bg-white">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Recent Works</h2>
             <div className="relative">
@@ -324,7 +325,7 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Team Members Section - Placeholder for employee details */}
         <section className="mb-16">

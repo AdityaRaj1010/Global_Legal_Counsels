@@ -7,7 +7,7 @@ const RealEstatePage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 to-green-900 text-white py-20">
-        <div className="container mx-auto px-6">
+        <div className="max-w-7xl container mx-auto px-6">
           <h1 className="text-5xl font-bold mb-6">Real Estate Law</h1>
           <p className="text-xl max-w-3xl leading-relaxed">
             Expert legal guidance for all real estate transactions, from residential purchases

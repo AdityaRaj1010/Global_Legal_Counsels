@@ -7,7 +7,7 @@ const EstatePlanningPage: React.FC = () => {
     <div className="estate-planning-page">
       {/* Hero Section with compelling headline */}
       <section className="hero-section bg-gradient-to-r from-gray-900 to-sky-900 text-white py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Estate Planning & Probate Services
           </h1>
