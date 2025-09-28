@@ -45,12 +45,12 @@ const services = [
   },
   {
     id: 4,
-    title: "Employment & Labor",
-    slug: "employment-labor",
-    icon: "/images/Employment.jpeg",
+    title: "Arbitration & Mediation",
+    slug: "arbitration-mediation",
+    icon: "/images/arbitration-mediation.avif",
     color: "from-green-500 to-teal-600",
-    description: "Protecting workers' rights and resolving workplace disputes. We handle discrimination, wrongful termination, and wage disputes.",
-    features: ["Workplace Rights", "Discrimination Cases", "Wage Disputes"],
+    description: "Resolving conflicts through neutral and efficient processes. We specialize in arbitration, mediation, and dispute resolution for a fair and timely outcome.",
+    features: ["Conflict Resolution", "Mediation Services", "Arbitration Expertise"],
     // stats: "$10M+ Recovered"
   },
   {
@@ -112,7 +112,17 @@ const services = [
     description: "Maximum compensation for accident victims. We fight for your rights in personal injury, medical malpractice, and negligence cases.",
     features: ["Auto Accidents", "Medical Malpractice", "Slip & Fall"],
     // stats: "$50M+ Recovered"
-  }
+  },
+  {
+    id: 11,
+    title: "Employment & Labor",
+    slug: "employment-labor",
+    icon: "/images/Employment.jpeg",
+    color: "from-teal-500 to-emerald-600",
+    description: "Protecting workers' rights and resolving workplace disputes. We handle discrimination, wrongful termination, and wage disputes.",
+    features: ["Workplace Rights", "Discrimination Cases", "Wage Disputes"],
+    // stats: "$10M+ Recovered"
+  },
 ];
 
 
@@ -199,7 +209,7 @@ export default function Home() {
               <svg className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              Trusted by 200+ Clients
+              Trusted by 300+ Clients
             </span>
           </motion.div>
 
@@ -208,7 +218,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
             Where Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Voice</span>
             <br />
@@ -222,7 +232,7 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl sm:text-2xl text-white/80 mb-4"
           >
-            <strong className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 text-3xl">5+</strong> Years of Excellence in Legal Representation
+            <strong className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 text-3xl">5+</strong> Years of Excellence in Legal Representation, Trusted Legal Consultancy, Advisory and Assistance
           </motion.p>
 
           {/* Stats row */}
@@ -230,11 +240,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="grid grid-cols-1 gap-8 max-w-2xl mx-auto mb-12 justify-center"
+            className="grid grid-cols-2 gap-8 max-w-2xl mx-auto mb-12 justify-center"
           >
             {[
-              // { value: "99%", label: "Success Rate" },
-              { value: "500+", label: "Cases Worked" },
+              { value: "98%", label: "Client Retention Rate" },
+              { value: "750+", label: "Cases Worked" },
               // { value: "24/7", label: "Support" }
             ].map((stat, index) => (
               <motion.div
@@ -439,7 +449,7 @@ export default function Home() {
           <Testimonials />
 
           {/* Additional trust indicators */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -449,7 +459,7 @@ export default function Home() {
               { label: "Reviews", value: "4.9/5" },
               { label: "Years Experience", value: "5+" },
               { label: "Happy Clients", value: "200+" },
-              { label: "Cases Worked", value: "500+" }
+              { label: "Cases Worked", value: "750+" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -463,7 +473,7 @@ export default function Home() {
                 <div className="text-white/60 text-sm">{item.label}</div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 

@@ -1,22 +1,22 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Globe, Award, TrendingUp, Users, Shield, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Building2, Globe, /*ExternalLink , Award, Users,*/ TrendingUp, Shield, ChevronLeft, ChevronRight} from "lucide-react";
 import Image from "next/image";
 
 // Client data - replace with your actual client information
 const clientsData = [
-    {
-        id: 1,
-        name: "National Debt Relief, LLC",
-        logo: "/images/clients/client1.webp", // Replace with actual logo path
-        industry: "Corporate",
-        description: "Provides debt relief & settlement services",
-        caseType: "Intellectual Property",
-        location: "New York, USA",
-        yearEstablished: "2009",
-        // employeeCount: "500+"
-    },
+    // {
+    //     id: 1,
+    //     name: "National Debt Relief, LLC",
+    //     logo: "/images/clients/client1.webp", // Replace with actual logo path
+    //     industry: "Corporate",
+    //     description: "Provides debt relief & settlement services",
+    //     caseType: "Intellectual Property",
+    //     location: "New York, USA",
+    //     yearEstablished: "2009",
+    //     // employeeCount: "500+"
+    // },
     {
         id: 2,
         name: "Law Offices of Philip H. Dyson",
@@ -149,7 +149,7 @@ export default function OurClients() {
     };
 
     const stats = [
-        { icon: Building2, value: "200+", label: "Corporate Clients" },
+        { icon: Building2, value: "300+", label: "Corporate Clients" },
         { icon: Globe, value: "5+", label: "Countries Served" },
         // { icon: Award, value: "50+", label: "Industry Awards" },
         { icon: TrendingUp, value: "98%", label: "Client Retention" }
@@ -252,7 +252,7 @@ export default function OurClients() {
                     {/* Clients Container */}
                     <div
                         ref={scrollRef}
-                        className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+                        className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         onMouseEnter={() => setIsAutoPlaying(false)}
                         onMouseLeave={() => setIsAutoPlaying(true)}
@@ -297,7 +297,7 @@ export default function OurClients() {
                                         {/* Client Info */}
                                         <div className="p-6">
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">{client.name}</h3>
-                                            <p className="text-sm text-gray-600 mb-4">{client.description}</p>
+                                            <p className="text-sm text-gray-600 mb-2">{client.description}</p>
 
                                             <div className="space-y-2 mb-4">
                                                 <div className="flex items-center gap-2 text-sm">
@@ -311,10 +311,10 @@ export default function OurClients() {
                                             </div>
 
                                             <div className="flex flex-wrap gap-2">
-                                                <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">
+                                                <span className="px-3 pt-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-medium">
                                                     {client.industry}
                                                 </span>
-                                                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                                                <span className="px-3 pt-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
                                                     {client.caseType}
                                                 </span>
                                             </div>
@@ -364,7 +364,7 @@ export default function OurClients() {
                         </div>
                         <div className="text-left">
                             <p className="text-sm text-gray-600">Trusted by</p>
-                            <p className="text-lg font-bold text-gray-900">200+ Global Organizations</p>
+                            <p className="text-lg font-bold text-gray-900">300+ Global Clients</p>
                         </div>
                         <div className="hidden md:block">
                             <div className="flex items-center gap-1">

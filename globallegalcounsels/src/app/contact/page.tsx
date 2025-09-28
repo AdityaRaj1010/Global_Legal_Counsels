@@ -406,10 +406,10 @@ const ContactUsPage = () => {
                 <a href="/about" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Learn About Our Team
                 </a>
-                <a href="/services" className="block text-teal-600 hover:text-teal-700 transition-colors">
+                <a href="/legal/services" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Our Legal Services
                 </a>
-                <a href="/privacy" className="block text-teal-600 hover:text-teal-700 transition-colors">
+                <a href="/legal/privacy" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Privacy Policy
                 </a>
               </div>

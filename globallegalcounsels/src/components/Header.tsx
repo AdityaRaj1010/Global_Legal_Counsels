@@ -8,13 +8,14 @@ const services = [
   { title: "Civil Litigation", slug: "civil-litigation", icon: "⚖️" },
   { title: "Family Law", slug: "family-law", icon: "👨‍👩‍👧‍👦" },
   { title: "Criminal Defense", slug: "criminal-defense", icon: "🛡️" },
-  { title: "Employment & Labor", slug: "employment-labor", icon: "💼" },
+  { title: "Arbitration & Mediation", slug: "arbitration-mediation", icon: "🤝" },
   { title: "Business & Corporate", slug: "business-corporate", icon: "🏢" },
   { title: "Real Estate", slug: "real-estate", icon: "🏠" },
   { title: "Immigration", slug: "immigration", icon: "✈️" },
   { title: "Estate Planning & Probate", slug: "estate-planning", icon: "📋" },
   { title: "Intellectual Property", slug: "intellectual-property", icon: "💡" },
   { title: "Personal Injury", slug: "personal-injury", icon: "🏥" },
+  { title: "Employment & Labor", slug: "employment-labor", icon: "💼" },
 ];
 
 export default function Header() {

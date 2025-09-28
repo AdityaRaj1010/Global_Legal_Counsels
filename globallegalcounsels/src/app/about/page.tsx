@@ -192,8 +192,9 @@ const AboutPage = () => {
                 <h5 className='mb-6 text-pretty text-base'>Legal Consultant <strong>|</strong> Litigation & Advisory <strong>|</strong> Expertise Across USA <strong>|</strong> Australia <strong>|</strong> UK <strong>|</strong> New Zealand <strong>|</strong> Lawyer & Paralegal Professional <strong>|</strong> Arbitration, Mediation & Compliance Solutions</h5>
                 <p className="text-gray-700 leading-relaxed">
                   {/* [Add founder&apos;s bio here - education, experience, specializations, achievements, philosophy, etc.] */}
-                  I, Raj Aryan, have worked over with 16 Law Firms & Companies (on short & long term contractual, project basis), 130 Pro Se Clients and over 350+ cases in State and District Court, Appeal and Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, Arbitration, and Mediation across USA, Australia, UK, and Newzland on matters and disputes pertaining to Civil, Criminal, Corporate, Consumer, Debt Recovery, Family, Real Estate, Personal Injury, Employment, Insurance, Immigration, Mediclaim via providing paralegal services, namely research, drafting, filing, and guiding throughout the court procedures and ensuring legal compliance and preparing contracts.
+                  I, Raj Aryan, have worked over with 25 Law Firms & Companies (on short & long term contractual, project basis), 250 Pro Se Clients and over 750+ cases in State and District Court, Appeal and Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, Arbitration, and Mediation across USA, Australia, UK, and Newzland on matters and disputes pertaining to Civil, Criminal, Corporate, Consumer, Debt Recovery, Family, Real Estate, Personal Injury, Employment, Insurance, Immigration, Mediclaim via providing paralegal services, namely research, drafting, filing, and guiding throughout the court procedures and ensuring legal compliance and preparing contracts.
                 </p>
+                <br />
                 <div className='text-gray-700 mb-6'>Herein also, prepared Privacy Policy, Terms & Conditions, Return & Exchange Policy for Clients. Along with all these, I have acted in conscious regard with regard to the particular disputes and provided legal advice and drafted appropriate legal document as and when required as per the issue.</div>
                 <div className="mb-6">
                   <p className="text-sm text-gray-600">
@@ -213,7 +214,7 @@ const AboutPage = () => {
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Employment Law</span>
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Legal Agreement</span>
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Case Law</span>
-                      <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Arbitration</span>
+                      <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Arbitration & Mediation</span>
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Human & Civil Rights</span>
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Legal Pleadings</span>
                     </span>
@@ -227,12 +228,12 @@ const AboutPage = () => {
                     <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Klie Law Offices</span>
                     <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>The Cowlitzlaw Group</span>
                     <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>The Mines Law Firm</span>
-                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Law Offices of Maro Burunsuzyan</span>
-                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>National Debt Relief, LLC</span>
-                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Offices of Journey Law</span>
+                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>D & D Law Offices</span>
+                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>CMN Group LLC</span>
+                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Inter Connects Inc.</span>
                     <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Law Offices of Philip H. Dyson</span>
                     <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Ironclad Law</span>
-                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Empire Global</span>
+                    <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Offices of Journey Law</span>
                   </span>
                   <div><i>Based in Australia</i></div>
                   <span className='flex flex-wrap'>

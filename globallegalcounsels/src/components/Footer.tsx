@@ -40,6 +40,7 @@ const Footer = () => {
 
   const services = [
     { name: "Family Law", href: "/services/family-law" },
+    { name: "Arbitration & Mediation", href: "/services/arbitration-mediation" },
     { name: "Immigration Law", href: "/services/immigration" },
     { name: "Employment Law", href: "/services/employment-labor" },
     { name: "Corporate Law", href: "/services/business-corporate" },
@@ -63,10 +64,10 @@ const Footer = () => {
   ];
 
   const stats = [
-    { icon: Users, value: "200+", label: "Clients Served" },
+    { icon: Users, value: "300+", label: "Clients Served" },
     { icon: Award, value: "5+", label: "Years Experience" },
-    { icon: Scale, value: "99%", label: "Success Rate" },
-    { icon: Briefcase, value: "450+", label: "Cases Worked" },
+    { icon: Scale, value: "98%", label: "Client Retention Rate" },
+    { icon: Briefcase, value: "750+", label: "Cases Worked" },
   ];
 
   return (

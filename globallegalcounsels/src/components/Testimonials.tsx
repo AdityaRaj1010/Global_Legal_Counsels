@@ -8,7 +8,7 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-    { id: 1, name: 'Devina', text: "Raj is an amazing freelancer who is quick and delivers quality work." },
+    // { id: 1, name: 'Devina', text: "Raj is an amazing freelancer who is quick and delivers quality work." },
     { id: 2, name: 'Rajat', text: "Raj is great, I love his thoroughness and approach to helping me with my issue. I would 100% rehire Raj in a heartbeat if I had any legal issues. Go with Raj, you won't be disappointed. He helped me, a novice, through the process and was awesome to work with." },
     { id: 3, name: 'Mary', text: "This is my second time hiring Raj Aryan to assist me with probate case filings. He is accurate and timely in his work. I will rehire again if needed." },
     { id: 4, name: 'Faizan', text: "Raj was a pleasure to work with. A fantastic attorney, sharp and quick. Highly recommended!"},
