@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Mail, Facebook, Instagram, Twitter, ChevronDown, Phone, MapPin, Clock, Menu, X } from "lucide-react";
+import { Mail, /*Facebook, Instagram, Twitter, Phone, Clock,*/ MapPin, Menu, ChevronDown, X } from "lucide-react";
 
 const services = [
   { title: "Civil Litigation", slug: "civil-litigation", icon: "⚖️" },
@@ -67,21 +67,21 @@ export default function Header() {
       <motion.div 
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className="hidden lg:flex py-2 fixed left-0 right-0 top-0 z-[60] justify-between items-center px-8 xl:px-20 text-white bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600"
+        className="h-[46px] hidden lg:flex py-2 fixed left-0 right-0 top-0 z-[60] justify-between items-center px-8 xl:px-20 text-white bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600"
       >
         <div className="flex items-center gap-6 text-sm">
-          <div className="flex items-center gap-2 hover:text-yellow-100 transition-colors">
+          {/* <div className="flex items-center gap-2 hover:text-yellow-100 transition-colors">
             <Clock className="w-4 h-4" />
             <span>Mon-Sun: 24/7 Support</span>
-          </div>
+          </div> */}
           <div className="flex items-center gap-2 hover:text-yellow-100 transition-colors">
             <MapPin className="w-4 h-4" />
-            <span>Patna, India | Serving US / UK / NZ / AUS / IND</span>
+            <span>Serving US / UK / NZ / AUS / IND</span>
           </div>
         </div>
         
         <div className="flex items-center gap-6">
-          <div className="flex gap-3">
+          {/* <div className="flex gap-3">
             {[
               { Icon: Facebook, href: "https://www.facebook.com/globallegalcounsels/" },
               { Icon: Instagram, href: "https://www.instagram.com/globallegalcounsels/" },
@@ -97,7 +97,7 @@ export default function Header() {
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </div> */}
           
           <Link 
             href="mailto:raj@globallegalcounsels.com" 
@@ -107,13 +107,13 @@ export default function Header() {
             <span className="text-sm">raj@globallegalcounsels.com</span>
           </Link>
           
-          <Link 
+          {/* <Link 
             href="tel:+916204770237"
             className="flex gap-2 items-center bg-white/20 px-3 py-1 rounded-full hover:bg-white/30 transition-colors"
           >
             <Phone className="w-4 h-4" />
             <span className="text-sm font-medium">+91 6204770237</span>
-          </Link>
+          </Link> */}
         </div>
       </motion.div>
 
@@ -330,11 +330,11 @@ export default function Header() {
                   className="pt-4"
                 >
                   <Link
-                    href="/consultation"
+                    href="/contact"
                     onClick={() => setMenuOpen(false)}
                     className="block w-full px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white text-center rounded-full font-medium hover:shadow-lg transition-all"
                   >
-                    Get Free Consultation
+                    Consult Us
                   </Link>
                 </motion.div>
               </div>

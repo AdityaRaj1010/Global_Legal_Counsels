@@ -25,7 +25,6 @@ const Testimonials: React.FC = () => {
     };
 
     const goToPrevious = () => {
-        console.log('Going to previous testimonial');
         setCurrentIndex((prevIndex) =>
             prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
         );
@@ -52,13 +51,13 @@ const Testimonials: React.FC = () => {
 
             {/* Left Arrow */}
             <ArrowBigLeft
-                className="text-gray-400 absolute left-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                className="text-gray-400 absolute left-4 transform -translate-y-1/2 cursor-pointer hover:text-white hover:scale-120"
                 onClick={goToPrevious}
             />
 
             {/* Right Arrow */}
             <ArrowBigRight
-                className="text-gray-400 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                className="text-gray-400 absolute right-4 transform -translate-y-1/2 cursor-pointer hover:text-white hover:scale-120"
                 onClick={goToNext}
             />
         </div>

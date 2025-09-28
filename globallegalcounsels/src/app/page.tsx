@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Testimonials from "@/components/Testimonials";
-
+import OurClients from "@/components/OurClients";
 const scrollToSuccessStories = (e: React.MouseEvent) => {
   e.preventDefault();
   const el = document.getElementById("success-stories");
@@ -115,6 +115,7 @@ const services = [
   }
 ];
 
+
 export default function Home() {
   const servicesRef = useRef<HTMLDivElement | null>(null);
   const [activeService, setActiveService] = useState<number | null>(null);
@@ -221,7 +222,7 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-xl sm:text-2xl text-white/80 mb-4"
           >
-            5+ Years of Excellence in Legal Representation
+            <strong className="font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 text-3xl">5+</strong> Years of Excellence in Legal Representation
           </motion.p>
 
           {/* Stats row */}
@@ -229,12 +230,12 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-12"
+            className="grid grid-cols-1 gap-8 max-w-2xl mx-auto mb-12 justify-center"
           >
             {[
-              { value: "99%", label: "Success Rate" },
-              { value: "200+", label: "Cases Won" },
-              { value: "24/7", label: "Support" }
+              // { value: "99%", label: "Success Rate" },
+              { value: "500+", label: "Cases Worked" },
+              // { value: "24/7", label: "Support" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -305,7 +306,7 @@ export default function Home() {
           </motion.div>
 
           {/* Services Grid */}
-          <div className="space-y-20">
+          <div className="space-y-10 lg:w-[80%] mx-auto">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -313,35 +314,35 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
-                className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                className={`w-[100%] justify-center flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                   }`}
               >
                 {/* Image Section */}
                 <motion.div
-                  className="flex-1 relative group cursor-pointer"
+                  className="flex-1 relative group cursor-pointer w-[100%]"
                   whileHover={{ scale: 1.02 }}
                   onClick={() => setActiveService(activeService === service.id ? null : service.id)}
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <div
-                      className="h-[300px] lg:h-[400px] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                      className="h-[200px] lg:h-[300px] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
                       style={{ backgroundImage: `url(${service.icon})` }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-60 group-hover:opacity-70 transition-opacity`} />
 
                     {/* Overlay content */}
-                    <div className="absolute inset-0 flex items-center justify-center">
+                    {/* <div className="absolute inset-0 flex items-center justify-center">
                       <motion.div
                         initial={false}
                         animate={{ scale: activeService === service.id ? 1.2 : 1 }}
                         className="text-center text-white"
                       >
-                        {/* <div className="text-5xl font-bold mb-2">{service.id}</div> */}
-                        {/* <div className="text-lg font-medium uppercase tracking-wider opacity-90">
+                        <div className="text-5xl font-bold mb-2">{service.id}</div>
+                        <div className="text-lg font-medium uppercase tracking-wider opacity-90">
                           {service.stats}
-                        </div> */}
+                        </div>
                       </motion.div>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Decorative elements */}
@@ -350,7 +351,7 @@ export default function Home() {
                 </motion.div>
 
                 {/* Content Section */}
-                <div className="flex-1 space-y-6">
+                <div className="flex-1 space-y-3">
                   <motion.h3
                     className="text-3xl sm:text-4xl font-bold text-gray-900"
                     whileHover={{ x: 10 }}
@@ -386,7 +387,7 @@ export default function Home() {
                   >
                     <Link
                       href={`/services/${service.slug}`}
-                      className={`inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r ${service.color} text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group`}
+                      className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group`}
                     >
                       <span>Learn More</span>
                       <svg
@@ -406,12 +407,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Clients Section */}
+          <OurClients/> 
+
       {/* Enhanced Testimonials Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
+      <section className="py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute top-0 left-[35%] w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
+          <div className="absolute bottom-0 right-[35%] w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -439,13 +443,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center"
+            className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center"
           >
             {[
               { label: "Reviews", value: "4.9/5" },
               { label: "Years Experience", value: "5+" },
               { label: "Happy Clients", value: "200+" },
-              { label: "Cases Won", value: "200+" }
+              { label: "Cases Worked", value: "500+" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -477,7 +481,7 @@ export default function Home() {
             Ready to Protect Your Rights?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Get expert legal representation today. Your first consultation is completely free.
+            With trusted legal consultancy, advisory and assistance across multiple domains.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

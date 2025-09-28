@@ -234,7 +234,7 @@ const FamilyLawPage: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <Clock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-              <h3 className="font-semibold mb-2">25+ Years Experience</h3>
+              <h3 className="font-semibold mb-2">5+ Years Experience</h3>
               <p className="text-sm text-gray-600">Decades of family law expertise in complex and sensitive cases.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">

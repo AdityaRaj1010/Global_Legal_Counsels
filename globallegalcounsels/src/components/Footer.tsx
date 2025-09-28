@@ -66,7 +66,7 @@ const Footer = () => {
     { icon: Users, value: "200+", label: "Clients Served" },
     { icon: Award, value: "5+", label: "Years Experience" },
     { icon: Scale, value: "99%", label: "Success Rate" },
-    { icon: Briefcase, value: "200+", label: "Cases Won" },
+    { icon: Briefcase, value: "450+", label: "Cases Worked" },
   ];
 
   return (
@@ -133,13 +133,13 @@ const Footer = () => {
                     GLC
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-white">Global Legal</h2>
-                    <p className="text-xs text-gray-400">Counsels & Associates</p>
+                    <h2 className="text-xl font-bold text-white">Global Legal Counsels</h2>
+                    <p className="text-xs text-gray-400"></p>
                   </div>
                 </div>
                 
                 <p className="text-sm leading-relaxed text-gray-300 mb-6">
-                  Providing trusted legal counseling across multiple domains. 
+                  Providing trusted legal consultancy, advisory and assistance across multiple domains.
                   Empowering you with clarity, guidance, and expert solutions for over 5 years.
                 </p>
 
@@ -305,7 +305,7 @@ const Footer = () => {
                     <Clock className="w-4 h-4 mt-0.5 text-yellow-500/70" />
                     <div>
                       <p className="font-medium">Business Hours</p>
-                      <p>Mon - Sun: 24/7 Support</p>
+                      <p>24/7 Support</p>
                       {/* <p className="text-xs mt-1 text-gray-400">24/7 Emergency Support</p> */}
                     </div>
                   </div>

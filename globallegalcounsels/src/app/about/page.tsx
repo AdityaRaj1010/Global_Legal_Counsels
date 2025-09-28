@@ -183,9 +183,9 @@ const AboutPage = () => {
                     <Link href={"https://www.linkedin.com/in/raj-aryan-901797343"}>
                       <Linkedin />
                     </Link>
-                    <Link href={"https://www.upwork.com/freelancers/rajaryan"}>
+                    {/* <Link href={"https://www.upwork.com/freelancers/rajaryan"}>
                       <Image width={30} height={15} src={'/images/upwork-svg.png'} alt='upwork'></Image>
-                    </Link>
+                    </Link> */}
                   </span>
                 </div>
                 <h4 className="text-xl text-stone-600 mb-3">Founder & CEO of Global Legal Counsels</h4>

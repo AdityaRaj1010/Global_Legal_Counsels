@@ -368,7 +368,7 @@ const PersonalInjuryPage: React.FC = () => {
                         Why Injury Victims Choose Our Firm
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="text-center">
+                        {/* <div className="text-center">
                             <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">💰</span>
                             </div>
@@ -377,7 +377,7 @@ const PersonalInjuryPage: React.FC = () => {
                                 You pay absolutely nothing unless we win your case. No upfront costs, no hourly fees,
                                 no financial risk to you.
                             </p>
-                        </div>
+                        </div> */}
                         <div className="text-center">
                             <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-3xl">⚖️</span>
