@@ -297,7 +297,7 @@ const Footer = () => {
                     <MapPin className="w-4 h-4 mt-0.5 text-yellow-500/70" />
                     <div>
                       <p className="font-medium">Office Location</p>
-                      <p>Patna, Bihar, India</p>
+                      <p>Patna, India</p>
                       <p className="text-xs mt-1 text-gray-400">Serving US / UK / NZ / AUS / IND</p>
                     </div>
                   </div>

@@ -131,6 +131,7 @@ export default function Home() {
   const [activeService, setActiveService] = useState<number | null>(null);
   const [scrollY, setScrollY] = useState(0);
   const { scrollYProgress } = useScroll();
+  const [showAllServices, setShowAllServices] = useState(false);
 
   // Parallax effect for hero
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
@@ -295,7 +296,7 @@ export default function Home() {
       </motion.section>
 
       {/* Enhanced Services Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white" id="services" ref={servicesRef}>
+      <section className="pt-24 pb-6 bg-gradient-to-b from-gray-50 to-white" id="services" ref={servicesRef}>
         <div className="container mx-auto px-4 sm:px-6">
           {/* Section Header */}
           <motion.div
@@ -311,13 +312,13 @@ export default function Home() {
               Comprehensive Legal Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert legal representation across all major practice areas, tailored to your unique needs
+              Expert Legal Representation, Trusted Legal Consultancy, Advisory and Assistance across all major practice areas, tailored to your unique needs
             </p>
           </motion.div>
 
           {/* Services Grid */}
-          <div className="space-y-10 lg:w-[80%] mx-auto">
-            {services.map((service, index) => (
+          <div className="space-y-10 lg:w-[70%] mx-auto">
+            {services.slice(0, showAllServices ? services.length : 5).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -335,24 +336,11 @@ export default function Home() {
                 >
                   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                     <div
-                      className="h-[200px] lg:h-[300px] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
+                      className="h-[200px] lg:h-[250px] bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
                       style={{ backgroundImage: `url(${service.icon})` }}
                     />
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-60 group-hover:opacity-70 transition-opacity`} />
 
-                    {/* Overlay content */}
-                    {/* <div className="absolute inset-0 flex items-center justify-center">
-                      <motion.div
-                        initial={false}
-                        animate={{ scale: activeService === service.id ? 1.2 : 1 }}
-                        className="text-center text-white"
-                      >
-                        <div className="text-5xl font-bold mb-2">{service.id}</div>
-                        <div className="text-lg font-medium uppercase tracking-wider opacity-90">
-                          {service.stats}
-                        </div>
-                      </motion.div>
-                    </div> */}
                   </div>
 
                   {/* Decorative elements */}
@@ -361,7 +349,7 @@ export default function Home() {
                 </motion.div>
 
                 {/* Content Section */}
-                <div className="flex-1 space-y-3">
+                <div className="flex-1">
                   <motion.h3
                     className="text-3xl sm:text-4xl font-bold text-gray-900"
                     whileHover={{ x: 10 }}
@@ -369,12 +357,12 @@ export default function Home() {
                     {service.title}
                   </motion.h3>
 
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="mt-2 text-lg text-gray-600 leading-normal">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <div className="space-y-3">
+                  <div className="mt-2">
                     {service.features.map((feature, idx) => (
                       <motion.div
                         key={idx}
@@ -394,10 +382,11 @@ export default function Home() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    className="mt-2"
                   >
                     <Link
                       href={`/services/${service.slug}`}
-                      className={`inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group`}
+                      className={`inline-flex items-center gap-3 px-6 py-2 bg-gradient-to-r ${service.color} text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 group`}
                     >
                       <span>Learn More</span>
                       <svg
@@ -414,11 +403,19 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          <div className="flex justify-center mt-6">
+            <button
+              onClick={() => setShowAllServices(!showAllServices)}
+              className="cursor-pointer px-6 py-2 bg-gradient-to-b from-rose-500 to-rose-800 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              {showAllServices ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Our Clients Section */}
-          <OurClients/> 
+      <OurClients />
 
       {/* Enhanced Testimonials Section */}
       <section className="py-12 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
@@ -478,8 +475,8 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="py-24 bg-gradient-to-br from-blue-900 via-purple-900 to-pink-600 relative overflow-hidden">
+        <div className="absolute inset-0" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

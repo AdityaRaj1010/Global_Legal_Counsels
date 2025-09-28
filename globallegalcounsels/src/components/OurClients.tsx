@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Globe, /*ExternalLink , Award, Users,*/ TrendingUp, Shield, ChevronLeft, ChevronRight} from "lucide-react";
+import { Building2, Globe, /*ExternalLink , Award, Users,*/ TrendingUp, Shield, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 // Client data - replace with your actual client information
@@ -219,7 +219,7 @@ export default function OurClients() {
                             onClick={() => setSelectedIndustry(industry)}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${selectedIndustry === industry
+                            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedIndustry === industry
                                 ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white shadow-lg'
                                 : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                                 }`}
@@ -252,7 +252,7 @@ export default function OurClients() {
                     {/* Clients Container */}
                     <div
                         ref={scrollRef}
-                        className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
+                        className="flex gap-3 overflow-x-auto scrollbar-hide scroll-smooth"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         onMouseEnter={() => setIsAutoPlaying(false)}
                         onMouseLeave={() => setIsAutoPlaying(true)}
@@ -268,7 +268,7 @@ export default function OurClients() {
                                     whileHover={{ y: -8 }}
                                     onHoverStart={() => setHoveredClient(client.id)}
                                     onHoverEnd={() => setHoveredClient(null)}
-                                    className="flex-shrink-0 w-[300px]"
+                                    className="flex-shrink-0 w-[230px] h-[370px]"
                                 >
                                     <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 h-full">
                                         {/* Logo Section */}
@@ -286,16 +286,16 @@ export default function OurClients() {
                                                 </div> */}
                                                 {/* Uncomment and use this when you have actual logos */}
                                                 <Image
-                                                        src={client.logo}
-                                                        alt={`${client.name}`}
-                                                        fill
-                                                        className="object-fit object-center bg-black text-white"
-                                                        />
+                                                    src={client.logo}
+                                                    alt={`${client.name}`}
+                                                    fill
+                                                    className="object-fit object-center bg-black text-white"
+                                                />
                                             </div>
                                         </div>
 
                                         {/* Client Info */}
-                                        <div className="p-6">
+                                        <div className="px-6 pt-3">
                                             <h3 className="text-xl font-bold text-gray-900 mb-2">{client.name}</h3>
                                             <p className="text-sm text-gray-600 mb-2">{client.description}</p>
 

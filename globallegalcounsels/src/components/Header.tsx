@@ -267,7 +267,7 @@ export default function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden"
+              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden w-[70%] mx-29"
             >
               <div className="px-4 py-6 space-y-2">
                 {[
@@ -303,7 +303,7 @@ export default function Header() {
                     Services
                   </button>
                   <div className="mt-2 ml-4 space-y-1">
-                    {services.slice(0, 5).map((service) => (
+                    {services.map((service) => (
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
@@ -314,13 +314,13 @@ export default function Header() {
                         <span>{service.title}</span>
                       </Link>
                     ))}
-                    <Link
+                    {/* <Link
                       href="/#services"
                       onClick={scrollToServices}
                       className="block px-4 py-2 text-sm font-medium text-yellow-600 hover:text-yellow-700"
                     >
                       View all services →
-                    </Link>
+                    </Link> */}
                   </div>
                 </motion.div>
                 
