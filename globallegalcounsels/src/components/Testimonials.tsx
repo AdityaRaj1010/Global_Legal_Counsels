@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
 
 interface Testimonial {
@@ -19,6 +19,16 @@ const testimonials: Testimonial[] = [
 
 const Testimonials: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+    // Auto-scroll effect
+useEffect(() => {
+    const intervalId = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(intervalId);
+}, [testimonials.length]);
 
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);

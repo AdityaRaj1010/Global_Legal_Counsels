@@ -133,7 +133,7 @@ export default function OurClients() {
                 if (isAtEnd) {
                     scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+                    scrollRef.current.scrollBy({ left: 230, behavior: 'smooth' });
                 }
             }
         }, 3000);
@@ -143,7 +143,7 @@ export default function OurClients() {
 
     const scrollToDirection = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
-            const scrollAmount = direction === 'left' ? -320 : 320;
+            const scrollAmount = direction === 'left' ? -230 : 230;
             scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
     };

@@ -65,7 +65,7 @@ const Footer = () => {
 
   const stats = [
     { icon: Users, value: "300+", label: "Clients Served" },
-    { icon: Award, value: "5+", label: "Years Experience" },
+    { icon: Award, value: "5+", label: "Years of Experience" },
     { icon: Scale, value: "98%", label: "Client Retention Rate" },
     { icon: Briefcase, value: "750+", label: "Cases Worked" },
   ];
