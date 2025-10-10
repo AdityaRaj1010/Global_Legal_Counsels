@@ -56,11 +56,11 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Our Services", href: "/#services" },
+    { name: "Our Team", href: "/about/#our-team" },
+    { name: "Careers", href: "/careers" },
     { name: "Contact Us", href: "/contact" },
     { name: "Privacy Policy", href: "/legal/privacy" },
     { name: "Terms of Service", href: "/legal/terms" },
-    // { name: "FAQ", href: "/faq" },
-    // { name: "Blog", href: "/blog" },
   ];
 
   const stats = [
@@ -149,7 +149,7 @@ const Footer = () => {
                     { Icon: Facebook, href: "https://www.facebook.com/globallegalcounsels/" },
                     { Icon: Instagram, href: "https://www.instagram.com/globallegalcounsels/" },
                     { Icon: Twitter, href: "https://x.com/globallegalcounsels/" },
-                    { Icon: Linkedin, href: "https://www.linkedin.com/in/raj-aryan-901797343" }
+                    { Icon: Linkedin, href: "https://www.linkedin.com/company/global-legal-counsels/" }
                   ].map(({ Icon, href }, i) => (
                     <motion.a
                       key={i}

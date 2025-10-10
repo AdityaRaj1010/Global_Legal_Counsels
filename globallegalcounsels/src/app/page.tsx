@@ -219,14 +219,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-2"
+            className="mb-4"
           >
             {/* Where Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Voice</span>
             <br />
             Gets Heard */}
-            Your Trusted Legal Counsel
+            <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">Your Trusted Legal Counsel</span>
 <br />
-            <span className="font-semibold text-xl sm:text-2xl lg:text-3xl bg-clip-text">Grounded in Zealous Advocacy and Client Commitment</span>
+            <span className="font-semibold text-base bg-clip-text italic text-white leading-tight">( Grounded in Zealous Advocacy and Client Commitment )</span>
           </motion.h1>
 
           {/* Subheading */}

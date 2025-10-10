@@ -1,8 +1,10 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Linkedin } from 'lucide-react';
 const AboutPage = () => {
+  const ourTeamRef = useRef<HTMLDivElement | null>(null);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -157,7 +159,7 @@ const AboutPage = () => {
         </section>
 
         {/* Founder & CEO Section - Placeholder for your content */}
-        <section className="mb-16">
+        <section className="mb-16" id='our-team' ref={ourTeamRef}>
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Leadership</h2>
 
           {/* Founder/CEO Content Area - You'll add the vertical image and content here */}
@@ -193,13 +195,14 @@ const AboutPage = () => {
                 {/* <h5 className='mb-6 text-pretty text-base'>Legal Consultant <strong>|</strong> Litigation & Advisory <strong>|</strong> Expertise Across USA <strong>|</strong> Australia <strong>|</strong> UK <strong>|</strong> New Zealand <strong>|</strong> Lawyer & Paralegal Professional <strong>|</strong> Arbitration, Mediation & Compliance Solutions</h5> */}
                 <p className="text-gray-700 leading-relaxed">
                   {/* [Add founder&apos;s bio here - education, experience, specializations, achievements, philosophy, etc.] */}
-                  With over 5 years of distinguished experience across international jurisdictions, Raj Aryan is a seasoned legal consultant specializing in litigation, advisory services, and dispute resolution. His practice spans the United States, Australia, United Kingdom, and New Zealand, providing comprehensive legal solutions to diverse clientele. As a qualified lawyer and paralegal professional, Raj has built an impressive track record working with 25+ law firms and corporate entities on both short-term and long-term contractual engagements. His portfolio includes successfully managing 300+ pro se clients and handling over 1000+ cases across multiple court systems, including State and District Courts, Courts of Appeal, Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, as well as Arbitration and Mediation proceedings. His comprehensive legal services include in-depth legal research, document drafting and filing, court procedure guidance, compliance advisory, and contract preparation, along with specialized expertise in developing Privacy Policies, Terms & Conditions, and Return & Exchange Policies for businesses across international jurisdictions.</p>
+                  With over 5 years of distinguished experience across international jurisdictions, Raj Aryan is a seasoned legal consultant specializing in litigation, advisory services, and dispute resolution. His practice spans the United States, Australia, United Kingdom, New Zealand, and India providing comprehensive legal solutions to diverse clientele. <br /> <br /> As a qualified lawyer and paralegal professional, Raj has built an impressive track record working with 25+ law firms and corporate entities on both short-term and long-term contractual engagements. His portfolio includes successfully managing 300+ clients and handling over 1000+ cases across multiple court systems, including State and District Courts, Courts of Appeal, Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, as well as Arbitration and Mediation proceedings. His comprehensive legal services include in-depth legal research, document drafting and filing, court procedure guidance, compliance advisory, and contract preparation, along with specialized expertise in developing Privacy Policies, Terms & Conditions, and Return & Exchange Policies for businesses across international jurisdictions.</p>
                 <br />
                 <div className='text-gray-700 mb-6'>Herein also, prepared Privacy Policy, Terms & Conditions, Return & Exchange Policy for Clients. Along with all these, I have acted in conscious regard with regard to the particular disputes and provided legal advice and drafted appropriate legal document as and when required as per the issue.</div>
                 <div className="mb-6">
                   <p className="text-sm text-gray-600">
                     <strong>Education:</strong> BA LLB, Lloyd Law College<br />
                     {/* <strong>Bar Admissions:</strong> [State bars]<br /> */}
+                    <span className='pt-3 block' />
                     <strong>Specializations:</strong>
                     <span className='flex flex-wrap'>
                       <span className='m-1 p-2 rounded-3xl bg-gray-300 text-stone-600 font-semibold'>Draft Documentation</span>
@@ -330,47 +333,65 @@ const AboutPage = () => {
 
         {/* Team Members Section - Placeholder for employee details */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Team</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8" id='our-team' ref={ourTeamRef}>Our Team</h2>
           <p className="text-lg text-gray-700 mb-8">
             Our team of legal professionals is dedicated to providing exceptional service and achieving outstanding results for our clients.
           </p>
 
-          {/* Team Grid - You'll populate this with your employee information */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-1 gap-8">
 
-            {/* Team Member Template - Duplicate and modify for each employee */}
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="w-full rounded-lg mb-4 flex items-center justify-center">
-                <Image src={'/images/Employee1.jpg'} alt='' height={100} width={200}></Image>
+            {/* Team Member Template */}
+            <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md border border-gray-200">
+              <div className="w-full lg:w-1/3 flex justify-center items-center mb-4 lg:mb-0">
+                <Image src={'/images/Employee1.jpg'} alt='' height={100} width={200} />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Harsh Kumar</h3>
-              <h4 className="text-stone-600 mb-3">[Title/Position]</h4>
-              <p className="text-gray-600 text-sm mb-4">
-                Banking & finance, general corporate advisory, arbitration, and litigation.
-              </p>
-              <div className="text-xs text-gray-500">
-                <p><strong>Education:</strong> B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune</p>
-                <p><strong>Experience:</strong> corporate, commercial and dispute resolution matters</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="w-full rounded-lg mb-4 flex items-center justify-center">
-                <Image src={'/images/Employee2.jpg'} alt='' height={100} width={270}></Image>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Vishal Kumar</h3>
-              <h4 className="text-stone-600 mb-3">[Title/Position]</h4>
-              <p className="text-gray-600 text-sm mb-4">
-                Experience as an Advocate at Patna High Court for over 3 years.
-              </p>
-              <div className="text-xs text-gray-500">
-                <p><strong>Education:</strong> B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala</p>
-                <p><strong>Experience:</strong> legal research, drafting, and courtroom advocacy.</p>
+              <div className="w-full lg:w-2/3 lg:pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Harsh Kumar</h3>
+                <h4 className="text-stone-600 mb-3">Legal Associate</h4>
+                {/* <p className="text-gray-600 text-sm mb-4">
+                  Banking & finance, general corporate advisory, arbitration, and litigation.
+                </p>
+                <div className="text-xs text-gray-500">
+                  <p><strong>Education:</strong> B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune</p>
+                  <p><strong>Experience:</strong> Corporate, commercial and dispute resolution matters</p>
+                </div> */}
+                <p>Harsh Kumar is a B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune, with experience across corporate, commercial, and dispute resolution matters. He has trained with reputed law firms including IndusLaw, N K Law Associates, and ASM Civil Rights Law Practice, where he gained hands-on exposure to banking & finance, general corporate advisory, arbitration, and litigation.
+                </p><br />
+                <p>At Global Legal Counsels, Harsh contributes to corporate and cross-border assignments, leveraging his background in legal drafting, due diligence, and research. His areas of academic and professional interest include corporate transactions, procedural laws, intellectual property, alternative dispute resolution, and cybersecurity.
+                </p><br />
+                <p>Harsh has been recognized for his leadership as Student President of Dr. D. Y. Patil Law College and has earned distinctions in moot courts, debates, and youth forums at national and state levels. His publication on “AI as a Juristic Person and IP Regulations Around It” reflects his keen interest in the evolving intersection of law and technology.
+                </p>
               </div>
             </div>
 
-            {/* Add more team member cards as needed */}
+            {/* Team Member Template */}
+            <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md border border-gray-200">
+              <div className="w-full lg:w-1/3 flex justify-center items-center mb-4 lg:mb-0">
+                <Image src={'/images/Employee2.jpg'} alt='' height={100} width={270} />
+              </div>
+              <div className="w-full lg:w-2/3 lg:pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Vishal Kumar</h3>
+                <h4 className="text-stone-600 mb-3">Legal Associate</h4>
+                {/* <p className="text-gray-600 text-sm mb-4">
+                  Experience as an Advocate at Patna High Court for over 3 years.
+                </p>
+                <div className="text-xs text-gray-500">
+                  <p><strong>Education:</strong> B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala</p>
+                  <p><strong>Experience:</strong> Legal research, drafting, and courtroom advocacy.</p>
+                </div> */}
+                <p>Vishal Kumar is a B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala, with experience as an Advocate at Patna High Court. With over 3 years of legal practice, he has developed expertise in various areas of law including legal research, drafting, and courtroom advocacy.
+                </p><br />
+                <p>At Global Legal Counsels, Vishal contributes his skills in legal research, case analysis, and client representation. His areas of professional interest include civil litigation, criminal defense, constitutional law, and dispute resolution. With a strong foundation in legal principles and practical court experience, he brings valuable insights to complex legal matters.
+                </p><br />
+                <p>Vishal&apos;s dedication to the legal profession is reflected in his comprehensive understanding of procedural laws and his commitment to providing effective legal solutions. His expertise in research and analytical skills enables him to support clients with well-researched legal strategies and sound advice across multiple practice areas.
+                </p>
+              </div>
+            </div>
+
+            {/* Add more team member cards here if needed */}
 
           </div>
+
         </section>
 
         {/* Call to Action */}

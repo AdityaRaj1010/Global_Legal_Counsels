@@ -166,6 +166,8 @@ export default function Header() {
                 dropdown: true,
                 onClick: scrollToServices
               },
+              { href: "/careers", label: "Careers" },
+              { href: "/about/#our-team", label: "Our Team" },
               { href: "/about", label: "About" },
               { href: "/contact", label: "Contact" },
             ].map((item, i) => (
@@ -179,8 +181,8 @@ export default function Header() {
                     <button
                       onClick={item.onClick}
                       className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-1 ${scrolled
-                          ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
-                          : 'hover:bg-white/10 text-white'
+                        ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
+                        : 'hover:bg-white/10 text-white'
                         }`}
                     >
                       {item.label}
@@ -223,8 +225,8 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 block ${scrolled
-                        ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
-                        : 'hover:bg-white/10 text-white'
+                      ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
+                      : 'hover:bg-white/10 text-white'
                       }`}
                   >
                     {item.label}
@@ -236,8 +238,8 @@ export default function Header() {
             <Link
               href="/contact"
               className={`ml-4 px-6 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 ${scrolled
-                  ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover:shadow-lg'
-                  : 'bg-white text-gray-800 hover:bg-yellow-50'
+                ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover:shadow-lg'
+                : 'bg-white text-gray-800 hover:bg-yellow-50'
                 }`}
             >
               Consult Us
@@ -271,12 +273,14 @@ export default function Header() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white border-t border-gray-100 overflow-hidden w-[70%] mx-29"
+              className="lg:hidden bg-white w-[70%] mx-29 mt-[-11px] pt-2"
             >
-              <div className="px-4 py-6 space-y-2">
+              <div className="px-4 space-y-2 max-h-[80vh] overflow-y-auto">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/about", label: "About" },
+                  { href: "/careers", label: "Careers" },
+                  { href: "/about/#our-team", label: "Our Team" },
                   { href: "/contact", label: "Contact" },
                 ].map((item, i) => (
                   <motion.div
@@ -288,7 +292,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 font-medium transition-colors"
+                      className="block px-4 py-1.5 rounded-lg text-gray-700 hover:bg-gray-50 font-medium transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -302,7 +306,7 @@ export default function Header() {
                 >
                   <button
                     onClick={scrollToServices}
-                    className="w-full text-left px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50 font-medium transition-colors"
+                    className="w-full text-left px-4 py-1.5 rounded-lg text-gray-700 hover:bg-gray-50 font-medium transition-colors"
                   >
                     Services
                   </button>
@@ -312,7 +316,7 @@ export default function Header() {
                         key={service.slug}
                         href={`/services/${service.slug}`}
                         onClick={() => setMenuOpen(false)}
-                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-600 hover:text-yellow-600 transition-colors"
+                        className="flex items-center gap-2 px-4 py-1 text-sm text-gray-600 hover:text-yellow-600 transition-colors"
                       >
                         <span>{service.icon}</span>
                         <span>{service.title}</span>

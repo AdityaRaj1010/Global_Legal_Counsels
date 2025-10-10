@@ -403,12 +403,12 @@ const ContactUsPage = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Additional Resources</h3>
               <div className="space-y-3">
-                <a href="/about" className="block text-teal-600 hover:text-teal-700 transition-colors">
+                <a href="/about/#our-team" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Learn About Our Team
                 </a>
-                <a href="/legal/services" className="block text-teal-600 hover:text-teal-700 transition-colors">
+                {/* <Link href="/#services" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Our Legal Services
-                </a>
+                </Link> */}
                 <a href="/legal/privacy" className="block text-teal-600 hover:text-teal-700 transition-colors">
                   Privacy Policy
                 </a>
