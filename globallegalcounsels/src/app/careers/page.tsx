@@ -95,13 +95,13 @@ export default function CareersPage() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 shadow-lg">
             <Sparkles className="w-4 h-4" />
-            <span>We're Hiring</span>
+            <span>We&apos;re Hiring</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
             Join Our Team
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-            We're always looking for talented individuals to join our legal team.
+            We&apos;re always looking for talented individuals to join our legal team.
             Take the first step towards an exciting career with us.
           </p>
         </div>
@@ -257,7 +257,7 @@ export default function CareersPage() {
               <div className="flex items-center gap-3 p-4 bg-green-50 border-2 border-green-200 rounded-xl">
                 <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
                 <p className="text-green-700 font-medium">
-                  Application submitted successfully! We'll be in touch soon.
+                  Application submitted successfully! We&apos;ll be in touch soon.
                 </p>
               </div>
             )}
