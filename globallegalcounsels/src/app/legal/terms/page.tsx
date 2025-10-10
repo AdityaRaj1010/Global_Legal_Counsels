@@ -1,342 +1,561 @@
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
+import { AlertCircle, Shield, FileText, Scale, Mail, Calendar, Globe, Lock, User, Info, AlertTriangle, Copyright, Gavel, CheckCircle } from 'lucide-react';
 
-const TermsOfServicePage = () => {
+const TermsOfUsePage = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header Section */}
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section - Keeping same as provided */}
       <section className="bg-gray-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Terms of Service</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Terms of Use</h1>
           <p className="text-xl md:text-2xl leading-relaxed max-w-4xl">
-            {/* Effective Date: [Insert Date] | Last Updated: [Insert Date] */}
-            Please read these Terms of Service carefully
+            Please read these Terms of Use carefully
           </p>
         </div>
       </section>
 
-      {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        
-        {/* Introduction */}
-        <section className="mb-12">
-          <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-8">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h2 className="text-lg font-medium text-red-800 mb-2">Important Legal Notice</h2>
-                <p className="text-red-700 text-sm leading-relaxed">
-                  Please read these Terms of Service carefully before using our website or services. By accessing 
-                  or using our website, you agree to be bound by these terms. If you do not agree with any part 
-                  of these terms, you must not use our website or services.
-                </p>
+      {/* Last Updated Banner */}
+      <div className="bg-blue-600 text-white py-3">
+        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Calendar className="w-5 h-5" />
+            <span className="text-sm font-medium">Last Updated: October 10, 2025</span>
+          </div>
+          <span className="text-sm">Effective immediately upon posting</span>
+        </div>
+      </div>
+
+      {/* Table of Contents Sidebar + Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="flex gap-8">
+          {/* Sticky Sidebar */}
+          <aside className="hidden lg:block w-72 flex-shrink-0">
+            <div className="sticky top-6">
+              <div className="bg-white rounded-lg shadow-md p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <FileText className="w-5 h-5" />
+                  Quick Navigation
+                </h3>
+                <nav className="space-y-2">
+                  <a href="#acceptance" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">1. Acceptance of Terms</a>
+                  <a href="#modifications" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">2. Modifications</a>
+                  <a href="#general-info" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">3. General Information</a>
+                  <a href="#property-rights" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">5. Property Rights</a>
+                  <a href="#prohibited-use" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">7. Prohibited Activities</a>
+                  <a href="#liability" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">14. Liability & Indemnification</a>
+                  <a href="#copyright" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">15-16. Copyright</a>
+                  <a href="#governance" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">21. Governing Law</a>
+                  <a href="#contact" className="block text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded px-3 py-2 transition">Contact Information</a>
+                </nav>
               </div>
             </div>
-          </div>
-          
-          <p className="text-gray-700 leading-relaxed">
-            These Terms of Service (&quot;Terms&quot;) govern your use of the website operated by [Your Firm Name] 
-            (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) and any legal services we may provide. These Terms constitute a legally 
-            binding agreement between you and our firm.
-          </p>
-        </section>
+          </aside>
 
-        {/* No Attorney-Client Relationship */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">No Attorney-Client Relationship Created</h2>
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <svg className="h-6 w-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 15.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
-              <div className="ml-4">
-                <h3 className="text-xl font-semibold text-yellow-800 mb-3">Critical Understanding Required</h3>
-                <div className="text-yellow-700 space-y-3">
-                  <p className="font-medium">
-                    Browsing our website, reading our content, or contacting us through our website does NOT 
-                    create an attorney-client relationship between you and our firm.
-                  </p>
-                  <p>
-                    An attorney-client relationship is established only when both parties have signed a written 
-                    retainer agreement that explicitly defines the scope of representation, fees, and other terms 
-                    of engagement.
-                  </p>
-                  <p>
-                    Until such a formal relationship exists, any communications between you and our firm are not 
-                    protected by attorney-client privilege and may not be confidential.
+          {/* Main Content */}
+          <main className="flex-1">
+            {/* Critical Notice */}
+            <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6 mb-8">
+              <div className="flex gap-4">
+                <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                <div>
+                  <h2 className="text-xl font-bold text-red-900 mb-2">Important Legal Agreement</h2>
+                  <p className="text-red-800 leading-relaxed">
+                    By accessing or using the Global Legal Counsels website, you agree to be legally bound by these Terms of Use. 
+                    If you do not agree with any part of these terms, you must immediately discontinue use of our website and services.
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Website Content Disclaimer */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Website Content and Information</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">General Information Only</h3>
-              <p className="text-gray-700 leading-relaxed">
-                The content on this website, including but not limited to text, graphics, images, videos, and other 
-                materials, is provided for general informational purposes only. This information is not intended to 
-                constitute legal advice and should not be relied upon as such for any specific situation.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">No Substitute for Professional Counsel</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Legal matters are highly fact-specific and jurisdiction-dependent. The information provided on this 
-                website cannot and does not take into account your individual circumstances, the specific facts of 
-                your situation, or the laws applicable in your jurisdiction. You should always consult with qualified 
-                legal counsel before making any legal decisions or taking any legal actions.
-              </p>
-            </div>
-
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">No Warranty of Accuracy</h3>
-              <p className="text-gray-700 leading-relaxed">
-                While we strive to keep the information on our website current and accurate, laws change frequently, 
-                and legal interpretations evolve. We make no representations or warranties regarding the accuracy, 
-                completeness, or timeliness of any information on this website. Use of this information is at your own risk.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Confidentiality Warning */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Communications and Confidentiality</h2>
-          
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold text-red-800 mb-4">⚠️ Confidentiality Warning</h3>
-            <div className="text-red-700 space-y-3">
-              <p>
-                <strong>Do not send confidential or sensitive information through this website, email, 
-                or any other electronic communication until we have confirmed our representation of you in writing.</strong>
-              </p>
-              <p>
-                Electronic communications are not secure and may be intercepted by unauthorized parties. 
-                Additionally, communications sent before establishing an attorney-client relationship may not be 
-                protected by attorney-client privilege.
-              </p>
-              <p>
-                If you need to discuss sensitive legal matters, please contact us by telephone to schedule 
-                a confidential consultation.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Form Submissions</h3>
-            <p className="text-gray-700 leading-relaxed">
-              When you submit information through our contact forms, you acknowledge and agree that such 
-              communications are not confidential and do not create an attorney-client relationship. We may, 
-              but are not obligated to, respond to such inquiries. Any response should not be construed as 
-              legal advice or as creating an attorney-client relationship.
-            </p>
-          </div>
-        </section>
-
-        {/* Acceptable Use */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Acceptable Use of Our Website</h2>
-          
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Permitted Uses</h3>
-            <p className="text-gray-700 mb-4">You may use our website for the following purposes:</p>
-            <div className="bg-green-50 p-4 rounded-lg">
-              <div className="space-y-2 text-gray-700">
-                <p>• Learning about our firm and legal services</p>
-                <p>• Reading general legal information and educational content</p>
-                <p>• Contacting us to inquire about potential representation</p>
-                <p>• Accessing resources and materials we have made publicly available</p>
+            {/* Section 1: Acceptance */}
+            <section id="acceptance" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+                  <h2 className="text-2xl font-bold text-gray-900">Acceptance of Terms</h2>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  This Terms of Use Agreement sets forth the terms and conditions governing your access to and use of the 
+                  Global Legal Counsels (&quot;the Website&quot;). By accessing or using the Website or any content made available 
+                  through it, including but not limited to RSS feeds (collectively, the &quot;Content&quot;), you agree to be bound 
+                  by this Agreement.
+                </p>
               </div>
-            </div>
-          </div>
+            </section>
 
-          <div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Prohibited Activities</h3>
-            <p className="text-gray-700 mb-4">You agree NOT to use our website for:</p>
-            <div className="bg-red-50 p-4 rounded-lg">
-              <div className="space-y-2 text-red-700 text-sm">
-                <p>• Any unlawful purpose or in violation of applicable laws or regulations</p>
-                <p>• Transmitting spam, viruses, or other harmful code</p>
-                <p>• Attempting to gain unauthorized access to our systems or data</p>
-                <p>• Impersonating our firm or our attorneys</p>
-                <p>• Violating intellectual property rights</p>
-                <p>• Disrupting the normal functioning of the website</p>
-                <p>• Collecting user information without consent</p>
-                <p>• Commercial purposes without our written permission</p>
+            {/* Section 2: Modifications */}
+            <section id="modifications" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+                  <h2 className="text-2xl font-bold text-gray-900">Modifications & Revisions</h2>
+                </div>
+                <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    Global Legal Counsels may update or revise these Terms of Use at any time by posting the revised version 
+                    on the Website. Your continued use of the Website following such changes shall constitute acceptance of 
+                    the revised terms. Such revisions will not apply retrospectively.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
 
-        {/* Intellectual Property */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Intellectual Property Rights</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Content</h3>
-              <p className="text-gray-700 leading-relaxed">
-                All content on this website, including text, graphics, logos, images, audio clips, videos, 
-                digital downloads, and software, is the property of [Your Firm Name] or its licensors and 
-                is protected by United States and international copyright, trademark, and other intellectual 
-                property laws.
-              </p>
-            </div>
+            {/* Section 3-4: General Information & Disclaimer */}
+            <section id="general-info" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+                  <h2 className="text-2xl font-bold text-gray-900">General Information & Disclaimers</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <div className="flex gap-3">
+                      <Info className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">No Legal Advice</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          The Website is provided as a complimentary resource for clients, colleagues, and other users, 
+                          offering general information only. The Content does not constitute legal or professional advice, 
+                          nor does it establish an attorney-client relationship or solicitation.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Limited License</h3>
-              <p className="text-gray-700 leading-relaxed">
-                We grant you a limited, non-exclusive, non-transferable license to access and use this website 
-                for personal, non-commercial purposes only. This license does not include the right to download 
-                (except for temporary caching), modify, reproduce, distribute, or create derivative works from 
-                our content without our express written permission.
-              </p>
-            </div>
+                  <div className="bg-orange-50 p-6 rounded-lg">
+                    <div className="flex gap-3">
+                      <AlertCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">No Liability</h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          Global Legal Counsels and its partners, employees, consultants, agents, and affiliates assume 
+                          no liability for any loss or damage arising from reliance on or use of the Website or its Content.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Trademark Notice</h3>
-              <p className="text-gray-700 leading-relaxed">
-                [Your Firm Name] and our logo are trademarks of our firm. Other trademarks, service marks, 
-                and logos used on this website are the property of their respective owners.
-              </p>
-            </div>
-          </div>
-        </section>
+                  <div className="border-l-4 border-gray-300 pl-4">
+                    <p className="text-gray-600 italic">
+                      Global Legal Counsels may modify the Website, its Content, and/or the services described on it 
+                      at any time, without prior notice.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        {/* Disclaimers */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Disclaimers and Limitations</h2>
-          
-          <div className="space-y-6">
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Website Availability</h3>
-              <p className="text-gray-700 leading-relaxed">
-                We provide this website &quot;as is&quot; and make no representations or warranties regarding its availability, 
-                functionality, or freedom from errors. We reserve the right to modify, suspend, or discontinue the 
-                website at any time without notice.
-              </p>
-            </div>
+            {/* Section 5-6: Property Rights */}
+            <section id="property-rights" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+                  <h2 className="text-2xl font-bold text-gray-900">Intellectual Property Rights</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                    <div className="flex gap-3">
+                      <Copyright className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">Exclusive Property</h3>
+                        <p className="text-gray-700 mb-4">
+                          The Website and all Content are the exclusive property of Global Legal Counsels and/or its licensors.
+                        </p>
+                        <div className="bg-white p-4 rounded">
+                          <p className="text-sm text-gray-600 font-medium mb-2">Restrictions:</p>
+                          <ul className="space-y-1 text-sm text-gray-600">
+                            <li>• You may NOT reproduce, duplicate, or copy content for commercial purposes</li>
+                            <li>• You may NOT sell, resell, or exploit any portion of the Website</li>
+                            <li>• Express written permission required for any commercial use</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Third-Party Links</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Our website may contain links to third-party websites for your convenience. We do not endorse, 
-                control, or assume responsibility for the content, privacy policies, or practices of any third-party 
-                websites. Your use of third-party websites is at your own risk.
-              </p>
-            </div>
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Limited Personal Use</h3>
+                    <p className="text-gray-700">
+                      Subject to compliance with this Agreement, Global Legal Counsels permits you to view and/or print 
+                      a single copy of Content for personal use. You must not remove or alter any acknowledgements, 
+                      disclaimers, or notices.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            <div className="bg-yellow-100 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Limitation of Liability</h3>
-              <p className="text-gray-700 leading-relaxed">
-                To the fullest extent permitted by law, [Your Firm Name] and its attorneys shall not be liable 
-                for any direct, indirect, incidental, special, or consequential damages arising from your use of 
-                this website or reliance on any information contained herein, even if we have been advised of the 
-                possibility of such damages.
-              </p>
-            </div>
-          </div>
-        </section>
+            {/* Section 7: Prohibited Activities */}
+            <section id="prohibited-use" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">7</div>
+                  <h2 className="text-2xl font-bold text-gray-900">Prohibited Activities</h2>
+                </div>
+                
+                <div className="bg-red-50 border-2 border-red-200 rounded-lg p-6">
+                  <p className="text-gray-700 font-semibold mb-4">You agree NOT to:</p>
+                  <div className="space-y-3">
+                    <div className="flex gap-3">
+                      <span className="text-red-600 mt-1">✕</span>
+                      <p className="text-gray-700">Access the Website through means other than standard web browsers</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-red-600 mt-1">✕</span>
+                      <p className="text-gray-700">Damage, alter, disable, overburden, or impair the Website</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-red-600 mt-1">✕</span>
+                      <p className="text-gray-700">Interfere with the use and enjoyment of the Website by others</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        {/* Jurisdiction and Governing Law */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Governing Law and Jurisdiction</h2>
-          <div className="bg-blue-50 p-6 rounded-lg">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              These Terms of Service are governed by and construed in accordance with the laws of [Your State], 
-              without regard to its conflict of law provisions.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts 
-              located in [Your County], [Your State]. You consent to personal jurisdiction and venue in these courts.
-            </p>
-          </div>
-        </section>
+            {/* Section 8-9: Browser Storage & Content Accuracy */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Lock className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Security & Content Recommendations</h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Shared Device Usage</h3>
+                    <p className="text-gray-700 text-sm">
+                      If you access the Website on a shared device, we recommend clearing your browsing history, 
+                      cookies, and cache to re-access the Website afresh. Global Legal Counsels disclaims responsibility 
+                      for issues arising from failure to follow this recommendation.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Content Accuracy</h3>
+                    <p className="text-gray-700 text-sm">
+                      Content is provided for general informational purposes only. We do not guarantee accuracy, 
+                      completeness, or reliability and encourage independent verification.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        {/* Professional Licensing */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Professional Licensing and Regulation</h2>
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              The attorneys of [Your Firm Name] are licensed to practice law in [Your State(s)]. We are subject 
-              to the rules and regulations of the [Your State] State Bar and other applicable professional 
-              regulatory bodies.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              If you are located outside of [Your State], the information on this website may not be applicable 
-              to your jurisdiction. Legal requirements vary significantly between jurisdictions, and you should 
-              consult with local counsel familiar with the laws in your area.
-            </p>
-          </div>
-        </section>
+            {/* Section 10-11: External Links */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Globe className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">External Links Policy</h2>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <p className="text-gray-700">
+                      The Website may provide links to third-party websites. Accessing these is at your own risk. 
+                      Global Legal Counsels does not control or endorse such sites and disclaims liability for their 
+                      content or use.
+                    </p>
+                  </div>
+                  <div className="bg-gray-100 p-4 rounded">
+                    <p className="text-gray-700 font-medium">
+                      ⚠️ You may not link to our Website without prior written permission from Global Legal Counsels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-        {/* Modifications */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Modifications to Terms</h2>
-          <p className="text-gray-700 leading-relaxed">
-            We reserve the right to modify these Terms of Service at any time. Any changes will be effective 
-            immediately upon posting on this website. Your continued use of the website after any such changes 
-            constitutes your acceptance of the new Terms of Service. We encourage you to review these Terms 
-            periodically to stay informed of any updates.
+            {/* Section 12-13: Trademarks & Warranties */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Shield className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Trademarks & Warranties</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="border-2 border-gray-200 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Trademark Protection</h3>
+                    <p className="text-gray-700">
+                      Unauthorized use of Global Legal Counsels&#39; trademarks, service marks, or logos is prohibited 
+                      and may violate applicable trademark laws.
+                    </p>
+                  </div>
+
+                  <div className="bg-red-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-red-900 mb-3">No Warranties</h3>
+                    <p className="text-gray-700 mb-3">
+                      The Website and Content are provided without warranties of any kind, whether express or implied, including:
+                    </p>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Merchantability</li>
+                      <li>• Fitness for a particular purpose</li>
+                      <li>• Non-infringement</li>
+                      <li>• Uninterrupted or error-free operation</li>
+                      <li>• Virus-free access</li>
+                      <li>• Accuracy of Content</li>
+                    </ul>
+                    <p className="text-gray-700 mt-4 font-medium">
+                      You assume full responsibility for verifying Content and safeguarding against harmful code.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 14: Liability & Indemnification */}
+            <section id="liability" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">14</div>
+                  <h2 className="text-2xl font-bold text-gray-900">Limitation of Liability & Indemnification</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-orange-50 border-2 border-orange-200 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-orange-900 mb-3">Limitation of Liability</h3>
+                    <p className="text-gray-700">
+                      To the fullest extent permitted by law, Global Legal Counsels disclaims all liability for direct, 
+                      indirect, incidental, consequential, or special damages arising from access to or use of the Website 
+                      and Content.
+                    </p>
+                  </div>
+
+                  <div className="bg-purple-50 border-2 border-purple-200 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-purple-900 mb-3">Indemnification</h3>
+                    <p className="text-gray-700">
+                      You agree to indemnify, defend, and hold harmless Global Legal Counsels, its affiliates, partners, 
+                      consultants, and employees from any claims, liabilities, or expenses (including attorneys&#39; fees) 
+                      arising from your use of the Website or breach of this Agreement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 15-16: Copyright */}
+            <section id="copyright" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Copyright className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Copyright Protection</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-gray-100 p-6 rounded-lg">
+                    <p className="text-gray-700 font-medium mb-2">
+                      Copyright © {currentYear} Global Legal Counsels. All rights reserved.
+                    </p>
+                    <p className="text-gray-600">
+                      The Website is protected under copyright law. You may not copy, modify, or distribute any part 
+                      of the Website without prior written consent from Global Legal Counsels.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Copyright Infringement Notice</h3>
+                    <p className="text-gray-700 mb-4">
+                      If you believe your work has been used in a manner that infringes your copyright or intellectual 
+                      property rights, please submit a written notice including:
+                    </p>
+                    <ul className="space-y-2 text-gray-600 mb-4">
+                      <li>✓ Authorized signature of the rights holder or representative</li>
+                      <li>✓ Description of the copyrighted work claimed to be infringed</li>
+                      <li>✓ Location of the infringing material (URL, etc.)</li>
+                      <li>✓ Statement of good faith belief that the use is unauthorized</li>
+                      <li>✓ Statement under penalty of perjury that the information is accurate</li>
+                    </ul>
+                    <div className="bg-white p-4 rounded">
+                      <p className="text-sm font-semibold text-gray-700">Send notices to:</p>
+                      <p className="text-sm text-gray-700">Office of the Global Legal Counsels</p>
+                      <p className="text-sm text-gray-600">Kazipur, Road No. 4, Rajendra Nagar, Patna, Bihar, India - 800004</p>
+                      <p className="text-sm text-blue-600">
+                        Email: <a href="mailto:raj@globallegalcounsels.com" className="hover:underline">raj@globallegalcounsels.com</a>
+                      </p>
+                      <p className="text-sm text-gray-500 mt-2">Subject Line: &quot;Copyright Infringement&quot;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 17: Dispute Resolution */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Scale className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Dispute Resolution</h2>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  In the event of any dispute, controversy, or claim arising out of or relating to these Terms of Use, 
+                  the parties agree to first attempt to resolve the matter through good faith negotiations. If the dispute 
+                  cannot be resolved within 30 days, the parties may pursue resolution through the appropriate legal channels 
+                  as set forth in the Governing Law and Jurisdiction clause.
+                </p>
+              </div>
+            </section>
+
+            {/* Section 18-20: Age, Severability, Waiver */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <User className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">General Provisions</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="border-l-4 border-blue-400 pl-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Age Requirements</h3>
+                    <p className="text-gray-700">
+                      By using this Website, you represent and warrant that you are at least 18 years of age and have 
+                      the legal capacity to enter into these Terms of Use. If accessing on behalf of an organization, 
+                      you represent that you have authority to bind that organization.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-green-400 pl-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Severability</h3>
+                    <p className="text-gray-700">
+                      If any provision of these Terms is held invalid or unenforceable, such provision shall be modified 
+                      to the minimum extent necessary or severed. The remaining provisions shall continue in full force 
+                      and effect.
+                    </p>
+                  </div>
+
+                  <div className="border-l-4 border-purple-400 pl-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">No Waiver</h3>
+                    <p className="text-gray-700">
+                      No waiver by Global Legal Counsels of any breach shall be deemed a waiver of any subsequent breach. 
+                      Failure to enforce any provision shall not constitute a waiver.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 21: Governing Law */}
+            <section id="governance" className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Gavel className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Governing Law & Jurisdiction</h2>
+                </div>
+                
+                <div className="bg-indigo-50 border-2 border-indigo-200 rounded-lg p-6">
+                  <p className="text-gray-700 mb-4">
+                    These Terms of Use shall be governed by and construed in accordance with the laws of India.
+                  </p>
+                  <div className="bg-white p-4 rounded">
+                    <p className="text-gray-700">
+                      <span className="font-semibold">Exclusive Jurisdiction:</span> Any disputes arising out of or relating 
+                      to these Terms shall be subject to the exclusive jurisdiction of the courts located in Patna, Bihar, India. 
+                      By using this Website, you consent to the jurisdiction and venue of such courts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Section 22-23: Privacy & Entire Agreement */}
+            <section className="mb-12">
+              <div className="bg-white rounded-lg shadow-md p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <FileText className="w-6 h-6 text-gray-700" />
+                  <h2 className="text-2xl font-bold text-gray-900">Privacy & Complete Agreement</h2>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Privacy Policy</h3>
+                    <p className="text-gray-700">
+                      By using the Website, you acknowledge and agree to Global Legal Counsels&#39; Privacy Policy, 
+                      available on the Website, which governs collection, use, and disclosure of your information.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Entire Agreement</h3>
+                    <p className="text-gray-700">
+                      These Terms of Use, together with our Privacy Policy, constitute the entire agreement between 
+                      you and Global Legal Counsels regarding your use of the Website and supersede all prior agreements 
+                      and understandings, whether written or oral, relating to the subject matter herein.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Contact Information */}
+            <section id="contact" className="mb-12">
+              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <Mail className="w-8 h-8" />
+                  <h2 className="text-2xl font-bold">Contact Information</h2>
+                </div>
+                
+                <p className="mb-6">
+                  For any queries, concerns, or feedback regarding this Agreement, please contact:
+                </p>
+                
+                <div className="bg-white/10 backdrop-blur rounded-lg p-6">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Shield className="w-5 h-5" />
+                      <span className="font-semibold">Global Legal Counsels</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Mail className="w-5 h-5" />
+                      <a href="mailto:raj@globallegalcounsels.com" className="hover:underline">
+                        raj@globallegalcounsels.com
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Globe className="w-5 h-5" />
+                      <Link href="tel:+916204770237" className="hover:underline">
+                        +91 6204770237
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Final Acknowledgment */}
+            <section>
+              <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg shadow-lg p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle className="w-8 h-8" />
+                  <h3 className="text-xl font-bold">Your Agreement & Acknowledgment</h3>
+                </div>
+                <p className="leading-relaxed">
+                  By continuing to use the Global Legal Counsels website, you acknowledge that you have read, 
+                  understood, and agree to be bound by all these Terms of Use. You understand that these terms 
+                  create legal obligations and affect your legal rights.
+                </p>
+              </div>
+            </section>
+            
+          </main>
+        </div>
+      </div>
+
+      {/* Footer Notice */}
+      <div className="bg-gray-900 text-white py-6 mt-12">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <p className="text-sm">
+            © {currentYear} Global Legal Counsels. All rights reserved. | Terms effective immediately upon posting.
           </p>
-        </section>
-
-        {/* Severability */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Severability</h2>
-          <p className="text-gray-700 leading-relaxed">
-            If any provision of these Terms of Service is deemed invalid, illegal, or unenforceable by a court 
-            of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make 
-            it valid and enforceable, or if such modification is not possible, such provision shall be severed 
-            from these Terms. The remaining provisions shall continue in full force and effect.
-          </p>
-        </section>
-
-        {/* Contact Information */}
-        <section className="mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Questions About These Terms</h2>
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <p className="text-gray-700 mb-4">
-              If you have questions about these Terms of Service, please contact us:
-            </p>
-            <div className="space-y-2 text-gray-700">
-              <p><strong>Global Legal Counsels</strong></p>
-              {/* <p>[Your Address]</p>
-              <p>[City, State, ZIP Code]</p> */}
-              <p>Phone: <Link href={"tel:+916204770237"}>+91 6204770237</Link></p>
-              <p>Email: <Link href={"mailto:raj@globallegalcounsels.com"}>raj@globallegalcounsels.com</Link></p> 
-            </div>
-          </div>
-        </section>
-
-        {/* Acknowledgment */}
-        <section className="border-t pt-8">
-          <div className="bg-blue-600 text-white p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4">Acknowledgment of Terms</h3>
-            <p className="leading-relaxed">
-              By using this website, you acknowledge that you have read, understood, and agree to be bound by 
-              these Terms of Service. You also acknowledge that you understand the limitations on attorney-client 
-              relationships and confidentiality described herein.
-            </p>
-          </div>
-        </section>
-        
+        </div>
       </div>
     </div>
   );
 };
 
-export default TermsOfServicePage;
+export default TermsOfUsePage;

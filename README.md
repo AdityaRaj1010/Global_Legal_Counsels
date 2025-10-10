@@ -28,11 +28,24 @@ This project allows users to fill in a contact form on your website, and the det
 ## 📂 Project Structure
 ```bash
 extension/ # Main Next.js project
-├── app/
-│ ├── contact/page.tsx # Contact form page
-│ └── api/send-email/ # API route for sending emails
+├── src/
+│   ├── app/
+│   │   ├── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── globals.css
+│   │   ├── about/
+│   │   ├── legal/
+│   │   │   ├── terms/page.tsx
+│   │   │   ├── privacy/page.tsx
+│   │   ├── services/
+│   │   ├── contact/page.tsx # Contact form page
+│   │   └── api/send-email/route.ts # API route for sending emails
+│   ├── components
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── Layout.tsx
 ├── public/
-├── styles/
 └── README.md
 ```
 ## ⚙️ Setup Instructions

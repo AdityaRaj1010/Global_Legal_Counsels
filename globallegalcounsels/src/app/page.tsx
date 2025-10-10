@@ -219,11 +219,14 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight mb-2"
           >
-            Where Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Voice</span>
+            {/* Where Your <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Voice</span>
             <br />
-            Gets Heard
+            Gets Heard */}
+            Your Trusted Legal Counsel
+<br />
+            <span className="font-semibold text-xl sm:text-2xl lg:text-3xl bg-clip-text">Grounded in Zealous Advocacy and Client Commitment</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -245,7 +248,7 @@ export default function Home() {
           >
             {[
               { value: "98%", label: "Client Retention Rate" },
-              { value: "750+", label: "Cases Worked" },
+              { value: "1000+", label: "Cases Worked" },
               // { value: "24/7", label: "Support" }
             ].map((stat, index) => (
               <motion.div
@@ -321,7 +324,7 @@ export default function Home() {
             {services.slice(0, showAllServices ? services.length : 5).map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                // initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
@@ -366,7 +369,7 @@ export default function Home() {
                     {service.features.map((feature, idx) => (
                       <motion.div
                         key={idx}
-                        initial={{ opacity: 0, x: -20 }}
+                        // initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: idx * 0.1 }}
@@ -456,7 +459,7 @@ export default function Home() {
               { label: "Reviews", value: "4.9/5" },
               { label: "Years Experience", value: "5+" },
               { label: "Happy Clients", value: "200+" },
-              { label: "Cases Worked", value: "750+" }
+              { label: "Cases Worked", value: "1000+" }
             ].map((item, index) => (
               <motion.div
                 key={index}

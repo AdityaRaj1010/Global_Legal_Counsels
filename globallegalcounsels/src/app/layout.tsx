@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 export const metadata = {
 title: "Global Legal Counsels",
-description: "Legal templates, guides & compliance resources",
+description: "Legal Representation, Consultancy, Advisory and Assistance",
 };
 
 

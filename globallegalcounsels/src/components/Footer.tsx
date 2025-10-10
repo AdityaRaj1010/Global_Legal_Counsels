@@ -66,8 +66,8 @@ const Footer = () => {
   const stats = [
     { icon: Users, value: "300+", label: "Clients Served" },
     { icon: Award, value: "5+", label: "Years of Experience" },
-    { icon: Scale, value: "98%", label: "Client Retention Rate" },
-    { icon: Briefcase, value: "750+", label: "Cases Worked" },
+    // { icon: Scale, value: "98%", label: "Client Retention Rate" },
+    { icon: Briefcase, value: "1000+", label: "Cases Worked" },
   ];
 
   return (
@@ -77,9 +77,8 @@ const Footer = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: isVisible ? 1 : 0 }}
         onClick={scrollToTop}
-        className={`fixed bottom-8 right-8 z-40 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${
-          isVisible ? 'translate-y-0' : 'translate-y-20'
-        }`}
+        className={`fixed bottom-8 right-8 z-40 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ${isVisible ? 'translate-y-0' : 'translate-y-20'
+          }`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
@@ -97,7 +96,7 @@ const Footer = () => {
         {/* Stats Section */}
         <div className="relative border-b border-gray-700/50">
           <div className="max-w-7xl mx-auto px-6 md:px-16 py-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
@@ -121,7 +120,7 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="relative max-w-7xl mx-auto px-6 md:px-16 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-            
+
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <motion.div
@@ -138,7 +137,7 @@ const Footer = () => {
                     <p className="text-xs text-gray-400"></p>
                   </div>
                 </div>
-                
+
                 <p className="text-sm leading-relaxed text-gray-300 mb-6">
                   Providing trusted legal consultancy, advisory and assistance across multiple domains.
                   Empowering you with clarity, guidance, and expert solutions for over 5 years.
@@ -269,7 +268,7 @@ const Footer = () => {
                   <div className="w-1 h-6 bg-gradient-to-b from-yellow-500 to-yellow-600" />
                   Get in Touch
                 </h3>
-                
+
                 <div className="space-y-4 mb-8">
                   <a
                     href="tel:+916204770237"
@@ -281,7 +280,7 @@ const Footer = () => {
                       <p>+91 6204770237</p>
                     </div>
                   </a>
-                  
+
                   <a
                     href="mailto:raj@globallegalcounsels.com"
                     className="flex items-start gap-3 text-sm text-gray-300 hover:text-yellow-500 transition-colors group"
@@ -292,16 +291,17 @@ const Footer = () => {
                       <p className="break-all">raj@globallegalcounsels.com</p>
                     </div>
                   </a>
-                  
+
                   <div className="flex items-start gap-3 text-sm text-gray-300">
-                    <MapPin className="w-4 h-4 mt-0.5 text-yellow-500/70" />
+                    <MapPin className="w-12 h-4 mt-0.5 text-yellow-500/70" />
                     <div>
                       <p className="font-medium">Office Location</p>
-                      <p>Patna, India</p>
-                      <p className="text-xs mt-1 text-gray-400">Serving US / UK / NZ / AUS / IND</p>
+                      <p> Global legal Counsels
+                        <span className="text-xs">, Kazipur, Road No. 4, Opposite Sri Arvind Mahila College Gate, Patna (Rajendranagar), India - 800004</span></p>
+                      <p className="text-xs mt-1 text-gray-400">Serving USA / UK / NZ / AUS / IND</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3 text-sm text-gray-300">
                     <Clock className="w-4 h-4 mt-0.5 text-yellow-500/70" />
                     <div>
@@ -351,7 +351,7 @@ const Footer = () => {
                   Designed with excellence • Built with integrity
                 </p>
               </div>
-              
+
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <Link href="/legal/privacy" className="text-gray-400 hover:text-yellow-500 transition-colors">
                   Privacy Policy

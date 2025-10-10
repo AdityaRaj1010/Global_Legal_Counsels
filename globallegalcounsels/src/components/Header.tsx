@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, /*Facebook, Instagram, Twitter, Phone, Clock,*/ MapPin, Menu, ChevronDown, X } from "lucide-react";
+import Image from 'next/image'
 
 const services = [
   { title: "Civil Litigation", slug: "civil-litigation", icon: "⚖️" },
@@ -29,11 +30,11 @@ export default function Header() {
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const progress = (scrollY / docHeight) * 100;
-      
+
       setScrolled(scrollY > 10);
       setScrollProgress(progress);
     }
-    
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -50,8 +51,8 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  const headerBgClass = scrolled 
-    ? "bg-white/95 backdrop-blur-md text-gray-800 shadow-lg" 
+  const headerBgClass = scrolled
+    ? "bg-white/95 backdrop-blur-md text-gray-800 shadow-lg"
     : "bg-gradient-to-b from-black/50 to-transparent text-white";
 
   const scrollToServices = (e: React.MouseEvent) => {
@@ -65,7 +66,7 @@ export default function Header() {
   return (
     <>
       {/* Top Bar */}
-      <motion.div 
+      <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className="h-[46px] hidden lg:flex py-2 fixed left-0 right-0 top-0 z-[60] justify-between items-center px-8 xl:px-20 text-white bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600"
@@ -77,10 +78,10 @@ export default function Header() {
           </div> */}
           <div className="flex items-center gap-2 hover:text-yellow-100 transition-colors">
             <MapPin className="w-4 h-4" />
-            <span>Serving US / UK / NZ / AUS / IND</span>
+            <span>Serving USA / UK / NZ / AUS / IND</span>
           </div>
         </div>
-        
+
         <div className="flex items-center gap-6">
           {/* <div className="flex gap-3">
             {[
@@ -99,15 +100,15 @@ export default function Header() {
               </motion.div>
             ))}
           </div> */}
-          
-          <Link 
-            href="mailto:raj@globallegalcounsels.com" 
+
+          <Link
+            href="mailto:raj@globallegalcounsels.com"
             className="flex gap-2 items-center hover:text-yellow-100 transition-colors group"
           >
             <Mail className="w-4 h-4 group-hover:rotate-12 transition-transform" />
             <span className="text-sm">raj@globallegalcounsels.com</span>
           </Link>
-          
+
           {/* <Link 
             href="tel:+916204770237"
             className="flex gap-2 items-center bg-white/20 px-3 py-1 rounded-full hover:bg-white/30 transition-colors"
@@ -120,24 +121,30 @@ export default function Header() {
 
       {/* Progress Bar */}
       <div className="fixed top-0 lg:top-[44px] left-0 right-0 h-[2px] bg-gray-200 z-[70]">
-        <motion.div 
+        <motion.div
           className="h-full bg-gradient-to-r from-yellow-500 to-yellow-600"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
       {/* Main Header */}
-      <header className={`fixed left-0 right-0 top-0 lg:top-[38px] z-50 transition-all duration-300 ${headerBgClass}`}>
+      <header className={`max-h-18 fixed left-0 right-0 top-0 lg:top-[38px] z-50 transition-all duration-300 ${headerBgClass}`}>
         <div className="container mx-auto px-4 sm:px-6 xl:px-20 py-4 flex items-center justify-between">
           <Link href="/" className="group">
-            <motion.div 
+            <motion.div
               className="flex items-center gap-3"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className={`w-12 h-12 rounded-lg ${scrolled ? 'bg-gradient-to-br from-yellow-500 to-yellow-600' : 'bg-white/20 backdrop-blur'} flex items-center justify-center text-white font-bold text-xl transition-all duration-300`}>
+              {/* <div className={`w-12 h-12 rounded-lg ${scrolled ? 'bg-gradient-to-br from-yellow-500 to-yellow-600' : 'bg-white/20 backdrop-blur'} flex items-center justify-center text-white font-bold text-xl transition-all duration-300`}>
                 GLC
-              </div>
+              </div> */}
+              <Image
+                src="/images/glc.png"
+                width={50}
+                height={50}
+                alt="Picture of the author"
+              />
               <div>
                 <h1 className="text-xl lg:text-2xl font-bold leading-tight">
                   Global Legal
@@ -153,9 +160,9 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {[
               { href: "/", label: "Home" },
-              { 
-                href: "/#services", 
-                label: "Services", 
+              {
+                href: "/#services",
+                label: "Services",
                 dropdown: true,
                 onClick: scrollToServices
               },
@@ -171,18 +178,17 @@ export default function Header() {
                   >
                     <button
                       onClick={item.onClick}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-1 ${
-                        scrolled 
-                          ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900' 
+                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 flex items-center gap-1 ${scrolled
+                          ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
                           : 'hover:bg-white/10 text-white'
-                      }`}
+                        }`}
                     >
                       {item.label}
-                      <ChevronDown 
-                        className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} 
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
                       />
                     </button>
-                    
+
                     <AnimatePresence>
                       {dropdownOpen && (
                         <motion.div
@@ -216,25 +222,23 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 block ${
-                      scrolled 
-                        ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900' 
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 block ${scrolled
+                        ? 'hover:bg-gray-100 text-gray-700 hover:text-gray-900'
                         : 'hover:bg-white/10 text-white'
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </Link>
                 )}
               </div>
             ))}
-            
+
             <Link
               href="/contact"
-              className={`ml-4 px-6 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 ${
-                scrolled
+              className={`ml-4 px-6 py-2.5 rounded-full font-medium transition-all duration-200 transform hover:scale-105 ${scrolled
                   ? 'bg-gradient-to-r from-yellow-500 to-yellow-600 text-white hover:shadow-lg'
                   : 'bg-white text-gray-800 hover:bg-yellow-50'
-              }`}
+                }`}
             >
               Consult Us
             </Link>
@@ -290,7 +294,7 @@ export default function Header() {
                     </Link>
                   </motion.div>
                 ))}
-                
+
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -323,7 +327,7 @@ export default function Header() {
                     </Link> */}
                   </div>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}

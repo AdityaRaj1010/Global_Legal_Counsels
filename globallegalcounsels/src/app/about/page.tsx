@@ -165,20 +165,21 @@ const AboutPage = () => {
             <div className="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-12">
 
               {/* Image Placeholder - Replace with your founder's image */}
-              <div className="flex-shrink-0 w-full lg:w-80">
-                <div className="h-96 w-full rounded-lg flex items-center justify-center">
+              <div className="flex-shrink-0 lg:w-80">
+                <div className="w-full rounded-full flex items-center justify-center">
                   <span className="text-gray-500 text-lg">
-                    <Image className="rounded-full" width={400} height={500} src={'https://media.licdn.com/dms/image/v2/D4E03AQGfZZD2nk_edA/profile-displayphoto-shrink_400_400/B4EZVOet5zHUAo-/0/1740778430574?e=1760572800&v=beta&t=krQ0wbQhYE1FvH6htFnrFQayq_d_pXyOLn3E6Jm_jQs'} alt={''}></Image>
+                    <Image className="rounded-full" width={400} height={400} src={'/images/glc_ceo.png'} alt={'Founder & CEO'}></Image>
                   </span>
                 </div>
-
               </div>
 
               {/* Content Area - Replace with founder's bio and details */}
               <div className="flex-1">
                 <div className='flex justify-between'>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Raj Aryan</h3>
-                  <span className='text-gray-500 font-semibold text-lg'>5+ Years of Experience</span>
+                  <h3 className="flex flex-col text-2xl font-bold text-gray-900 mb-4">Raj Aryan
+
+                    <span className='text-gray-500 font-semibold text-lg'>5+ Years of Experience</span>
+                  </h3>
                   <span className='flex gap-3'>
                     <Link href={"https://www.linkedin.com/in/raj-aryan-901797343"}>
                       <Linkedin />
@@ -189,11 +190,10 @@ const AboutPage = () => {
                   </span>
                 </div>
                 <h4 className="text-xl text-stone-600 mb-3">Founder & CEO of Global Legal Counsels</h4>
-                <h5 className='mb-6 text-pretty text-base'>Legal Consultant <strong>|</strong> Litigation & Advisory <strong>|</strong> Expertise Across USA <strong>|</strong> Australia <strong>|</strong> UK <strong>|</strong> New Zealand <strong>|</strong> Lawyer & Paralegal Professional <strong>|</strong> Arbitration, Mediation & Compliance Solutions</h5>
+                {/* <h5 className='mb-6 text-pretty text-base'>Legal Consultant <strong>|</strong> Litigation & Advisory <strong>|</strong> Expertise Across USA <strong>|</strong> Australia <strong>|</strong> UK <strong>|</strong> New Zealand <strong>|</strong> Lawyer & Paralegal Professional <strong>|</strong> Arbitration, Mediation & Compliance Solutions</h5> */}
                 <p className="text-gray-700 leading-relaxed">
                   {/* [Add founder&apos;s bio here - education, experience, specializations, achievements, philosophy, etc.] */}
-                  I, Raj Aryan, have worked over with 25 Law Firms & Companies (on short & long term contractual, project basis), 250 Pro Se Clients and over 750+ cases in State and District Court, Appeal and Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, Arbitration, and Mediation across USA, Australia, UK, and Newzland on matters and disputes pertaining to Civil, Criminal, Corporate, Consumer, Debt Recovery, Family, Real Estate, Personal Injury, Employment, Insurance, Immigration, Mediclaim via providing paralegal services, namely research, drafting, filing, and guiding throughout the court procedures and ensuring legal compliance and preparing contracts.
-                </p>
+                  With over 5 years of distinguished experience across international jurisdictions, Raj Aryan is a seasoned legal consultant specializing in litigation, advisory services, and dispute resolution. His practice spans the United States, Australia, United Kingdom, and New Zealand, providing comprehensive legal solutions to diverse clientele. As a qualified lawyer and paralegal professional, Raj has built an impressive track record working with 25+ law firms and corporate entities on both short-term and long-term contractual engagements. His portfolio includes successfully managing 300+ pro se clients and handling over 1000+ cases across multiple court systems, including State and District Courts, Courts of Appeal, Supreme Court, Federal Courts, Bankruptcy Court, Family Court, Small Claims Court, as well as Arbitration and Mediation proceedings. His comprehensive legal services include in-depth legal research, document drafting and filing, court procedure guidance, compliance advisory, and contract preparation, along with specialized expertise in developing Privacy Policies, Terms & Conditions, and Return & Exchange Policies for businesses across international jurisdictions.</p>
                 <br />
                 <div className='text-gray-700 mb-6'>Herein also, prepared Privacy Policy, Terms & Conditions, Return & Exchange Policy for Clients. Along with all these, I have acted in conscious regard with regard to the particular disputes and provided legal advice and drafted appropriate legal document as and when required as per the issue.</div>
                 <div className="mb-6">
@@ -332,7 +332,7 @@ const AboutPage = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Team</h2>
           <p className="text-lg text-gray-700 mb-8">
-            Our experienced team of legal professionals is dedicated to providing exceptional service and achieving outstanding results for our clients.
+            Our team of legal professionals is dedicated to providing exceptional service and achieving outstanding results for our clients.
           </p>
 
           {/* Team Grid - You'll populate this with your employee information */}
@@ -340,17 +340,31 @@ const AboutPage = () => {
 
             {/* Team Member Template - Duplicate and modify for each employee */}
             <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="bg-gray-200 h-48 w-full rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-gray-500">Employee Photo</span>
+              <div className="w-full rounded-lg mb-4 flex items-center justify-center">
+                <Image src={'/images/Employee1.jpg'} alt='' height={100} width={200}></Image>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">[Employee Name]</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Harsh Kumar</h3>
               <h4 className="text-stone-600 mb-3">[Title/Position]</h4>
               <p className="text-gray-600 text-sm mb-4">
-                [Brief description of role, experience, specializations]
+                Banking & finance, general corporate advisory, arbitration, and litigation.
               </p>
               <div className="text-xs text-gray-500">
-                <p><strong>Education:</strong> [Degree/School]</p>
-                <p><strong>Experience:</strong> [Years/Background]</p>
+                <p><strong>Education:</strong> B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune</p>
+                <p><strong>Experience:</strong> corporate, commercial and dispute resolution matters</p>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+              <div className="w-full rounded-lg mb-4 flex items-center justify-center">
+                <Image src={'/images/Employee2.jpg'} alt='' height={100} width={270}></Image>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Vishal Kumar</h3>
+              <h4 className="text-stone-600 mb-3">[Title/Position]</h4>
+              <p className="text-gray-600 text-sm mb-4">
+                Experience as an Advocate at Patna High Court for over 3 years.
+              </p>
+              <div className="text-xs text-gray-500">
+                <p><strong>Education:</strong> B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala</p>
+                <p><strong>Experience:</strong> legal research, drafting, and courtroom advocacy.</p>
               </div>
             </div>
 
