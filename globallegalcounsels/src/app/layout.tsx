@@ -6,8 +6,10 @@ import Footer from "../components/Footer";
 export const metadata = {
 title: "Global Legal Counsels",
 description: "Legal Representation, Consultancy, Advisory and Assistance",
+icons: {
+    icon: "/favicon.ico",
+  },
 };
-
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 return (
