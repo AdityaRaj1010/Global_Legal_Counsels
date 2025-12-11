@@ -331,7 +331,7 @@ const AboutPage = () => {
           </div>
         </section> */}
 
-        {/* Team Members Section - Placeholder for employee details */}
+        {/* Team Members Section - Placeholder for employee details
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8" id='our-team' ref={ourTeamRef}>Our Team</h2>
           <p className="text-lg text-gray-700 mb-8">
@@ -340,59 +340,31 @@ const AboutPage = () => {
 
           <div className="grid md:grid-cols-1 gap-8">
 
-            {/* Team Member Template */}
+            Team Member Template
             <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md border border-gray-200">
               <div className="w-full lg:w-1/3 flex justify-center items-center mb-4 lg:mb-0">
                 <Image src={'/images/Employee1.jpg'} alt='' height={100} width={200} />
               </div>
               <div className="w-full lg:w-2/3 lg:pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Harsh Kumar</h3>
-                <h4 className="text-stone-600 mb-3">Legal Associate</h4>
-                {/* <p className="text-gray-600 text-sm mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Name</h3>
+                <h4 className="text-stone-600 mb-3">Position</h4>
+                <p className="text-gray-600 text-sm mb-4">
                   Banking & finance, general corporate advisory, arbitration, and litigation.
                 </p>
                 <div className="text-xs text-gray-500">
-                  <p><strong>Education:</strong> B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune</p>
-                  <p><strong>Experience:</strong> Corporate, commercial and dispute resolution matters</p>
-                </div> */}
-                <p>Harsh Kumar is a B.A. LL.B. graduate from Dr. D. Y. Patil Law College, Pune, with experience across corporate, commercial, and dispute resolution matters. He has trained with reputed law firms including IndusLaw, N K Law Associates, and ASM Civil Rights Law Practice, where he gained hands-on exposure to banking & finance, general corporate advisory, arbitration, and litigation.
-                </p><br />
-                <p>At Global Legal Counsels, Harsh contributes to corporate and cross-border assignments, leveraging his background in legal drafting, due diligence, and research. His areas of academic and professional interest include corporate transactions, procedural laws, intellectual property, alternative dispute resolution, and cybersecurity.
-                </p><br />
-                <p>Harsh has been recognized for his leadership as Student President of Dr. D. Y. Patil Law College and has earned distinctions in moot courts, debates, and youth forums at national and state levels. His publication on “AI as a Juristic Person and IP Regulations Around It” reflects his keen interest in the evolving intersection of law and technology.
+                  <p><strong>Education:</strong></p>
+                  <p><strong>Experience:</strong></p>
+                </div>
+                <p>
                 </p>
               </div>
             </div>
 
-            {/* Team Member Template */}
-            <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              <div className="w-full lg:w-1/3 flex justify-center items-center mb-4 lg:mb-0">
-                <Image src={'/images/Employee2.jpg'} alt='' height={100} width={270} />
-              </div>
-              <div className="w-full lg:w-2/3 lg:pl-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Vishal Kumar</h3>
-                <h4 className="text-stone-600 mb-3">Legal Associate</h4>
-                {/* <p className="text-gray-600 text-sm mb-4">
-                  Experience as an Advocate at Patna High Court for over 3 years.
-                </p>
-                <div className="text-xs text-gray-500">
-                  <p><strong>Education:</strong> B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala</p>
-                  <p><strong>Experience:</strong> Legal research, drafting, and courtroom advocacy.</p>
-                </div> */}
-                <p>Vishal Kumar is a B.A. LL.B. graduate from The Rajiv Gandhi National University of Law, Patiala, with experience as an Advocate at Patna High Court. With over 3 years of legal practice, he has developed expertise in various areas of law including legal research, drafting, and courtroom advocacy.
-                </p><br />
-                <p>At Global Legal Counsels, Vishal contributes his skills in legal research, case analysis, and client representation. His areas of professional interest include civil litigation, criminal defense, constitutional law, and dispute resolution. With a strong foundation in legal principles and practical court experience, he brings valuable insights to complex legal matters.
-                </p><br />
-                <p>Vishal&apos;s dedication to the legal profession is reflected in his comprehensive understanding of procedural laws and his commitment to providing effective legal solutions. His expertise in research and analytical skills enables him to support clients with well-researched legal strategies and sound advice across multiple practice areas.
-                </p>
-              </div>
-            </div>
-
-            {/* Add more team member cards here if needed */}
+            Add more team member cards here if needed
 
           </div>
 
-        </section>
+        </section> */}
 
         {/* Call to Action */}
         <section className="text-center bg-stone-600 text-white p-12 rounded-lg">
